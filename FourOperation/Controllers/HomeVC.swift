@@ -7,16 +7,22 @@
 
 import UIKit
 
-class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var collectionView: UICollectionView!
+    private var collectionView: UICollectionView!
+    
+    let keyboardVC = KeyboardVC()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemRed
         
-       configureCollectionView()
+        configureCollectionView()
+        
+        add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
+        
         
     }
     
@@ -57,31 +63,51 @@ class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FOCollectionViewCell.identifier, for: indexPath)
         cell.backgroundColor = .darkGray
         
-        let image = UIImageView()
-        image.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/4, width: cell.bounds.width/2, height: cell.bounds.width/2)
+        let imageView = UIImageView()
+        imageView.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/4, width: cell.bounds.width/2, height: cell.bounds.width/2)
+        imageView.tintColor = .systemTeal
+
         
         if indexPath.item == 0 {
-            image.image = UIImage(systemName: "plus")
+            imageView.image = UIImage(systemName: "plus")
             
         } else if indexPath.item == 1 {
-            image.image = UIImage(systemName: "minus")
-            image.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/2-18, width: cell.bounds.width/2, height: cell.bounds.width/5)
+            imageView.image = UIImage(systemName: "minus")
+            imageView.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/2-15, width: cell.bounds.width/2, height: cell.bounds.width/8)
             
             
         } else if indexPath.item == 2 {
-            image.image = UIImage(systemName: "multiply")
+            imageView.image = UIImage(systemName: "multiply")
             
         } else if indexPath.item == 3 {
-            image.image = UIImage(systemName: "divide")
+            imageView.image = UIImage(systemName: "divide")
             
         }
         
         
         
-        cell.contentView.addSubview(image)
+        cell.contentView.addSubview(imageView)
         return cell
     }
 
 
 }
 
+extension UIViewController {
+    func add(_ child: UIViewController, frame: CGRect? = nil) {
+        addChild(child)
+
+        if let frame = frame {
+            child.view.frame = frame
+        }
+
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+    }
+
+    func remove() {
+        willMove(toParent: nil)
+        view.removeFromSuperview()
+        removeFromParent()
+    }
+}
