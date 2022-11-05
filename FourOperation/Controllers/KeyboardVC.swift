@@ -7,22 +7,21 @@
 
 import UIKit
 
-class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
-    var collectionView: UICollectionView!
+    var collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: UICollectionViewFlowLayout())
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .brown
-        
-       configureCollectionView()
+                
+        configureCollectionView()
         
     }
     
     func configureCollectionView() {
         
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: KeyboardViewFlowLayout())
+        collectionView.frame = view.bounds
+        collectionView.collectionViewLayout = KeyboardViewFlowLayout()
         view.addSubview(collectionView)
         
         collectionView.delegate = self
@@ -33,6 +32,7 @@ class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionView
 
     }
     
+    // Collection View Flow Layout
     func KeyboardViewFlowLayout() -> UICollectionViewFlowLayout {
         
         // Cell width calculation
@@ -52,6 +52,7 @@ class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionView
         return flowLayout
     }
     
+    // Collection View Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12
     }
@@ -99,6 +100,12 @@ class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionView
         cell.contentView.addSubview(textLabel)
         cell.contentView.addSubview(imageView)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { collectionView.deselectItem(at: indexPath, animated: true)
+        print("Selected a section: \(indexPath.section) X \(indexPath.row)")
+        
+        
     }
 
 

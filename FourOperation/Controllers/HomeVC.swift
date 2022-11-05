@@ -10,19 +10,13 @@ import UIKit
 final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     private var collectionView: UICollectionView!
-    
-    let keyboardVC = KeyboardVC()
-
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemRed
         
         configureCollectionView()
-        
-        add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
-        
         
     }
     
