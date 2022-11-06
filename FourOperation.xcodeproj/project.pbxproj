@@ -14,6 +14,7 @@
 		B102ADE5290E1E6B00C6DBA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B102ADE3290E1E6B00C6DBA7 /* LaunchScreen.storyboard */; };
 		B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102ADF0291221F800C6DBA7 /* FOCollectionViewCell.swift */; };
 		B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B115A62914CCC300DB8225 /* PlusVC.swift */; };
+		B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B115A92915F8A000DB8225 /* VC+Ext.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,7 @@
 		B102ADE6290E1E6B00C6DBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B102ADF0291221F800C6DBA7 /* FOCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCollectionViewCell.swift; sourceTree = "<group>"; };
 		B1B115A62914CCC300DB8225 /* PlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusVC.swift; sourceTree = "<group>"; };
+		B1B115A92915F8A000DB8225 /* VC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Ext.swift"; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,6 +64,7 @@
 		B102ADD7290E1E6A00C6DBA7 /* FourOperation */ = {
 			isa = PBXGroup;
 			children = (
+				B1B115A82915F87500DB8225 /* Extensions */,
 				B102ADEF2912218A00C6DBA7 /* Controllers */,
 				B102ADEC29121BA400C6DBA7 /* Views */,
 				B102ADD8290E1E6A00C6DBA7 /* AppDelegate.swift */,
@@ -97,6 +100,14 @@
 				B1B115A62914CCC300DB8225 /* PlusVC.swift */,
 			);
 			path = FourOperationControllers;
+			sourceTree = "<group>";
+		};
+		B1B115A82915F87500DB8225 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B1B115A92915F8A000DB8225 /* VC+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B1E407CF2913FA38004A3326 /* Cells */ = {
@@ -182,6 +193,7 @@
 				B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */,
 				B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */,
 				B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */,
+				B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */,
 				B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */,
 				B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */,
 				B102ADDB290E1E6A00C6DBA7 /* SceneDelegate.swift in Sources */,

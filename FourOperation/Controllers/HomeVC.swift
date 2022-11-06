@@ -10,6 +10,9 @@ import UIKit
 final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     private var collectionView: UICollectionView!
+    
+    var selectedNavigationControllerTitle: String?
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,44 +67,60 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         
         if indexPath.item == 0 {
             imageView.image = UIImage(systemName: "plus")
-            
         } else if indexPath.item == 1 {
             imageView.image = UIImage(systemName: "minus")
             imageView.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/2-15, width: cell.bounds.width/2, height: cell.bounds.width/8)
-            
-            
         } else if indexPath.item == 2 {
             imageView.image = UIImage(systemName: "multiply")
-            
         } else if indexPath.item == 3 {
             imageView.image = UIImage(systemName: "divide")
-            
         }
-        
-        
         
         cell.contentView.addSubview(imageView)
         return cell
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { collectionView.deselectItem(at: indexPath, animated: true)
+        print("Selected a section: \(indexPath.section) X \(indexPath.row)")
+        let selection = indexPath.item
+        print(selection)
+        let pushUpViewController = collectionViewCellPressedAction(item: indexPath.item)
+        pushUpViewController.title = selectedNavigationControllerTitle
+        pushUpViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .done, target: self, action: #selector(dismissSelf))
 
+        let navigationController = UINavigationController(rootViewController: pushUpViewController)
+        navigationController.modalPresentationStyle = .overFullScreen
 
-}
-
-extension UIViewController {
-    func add(_ child: UIViewController, frame: CGRect? = nil) {
-        addChild(child)
-
-        if let frame = frame {
-            child.view.frame = frame
+        present(navigationController, animated: true)
+    }
+    
+    // Collection View Cell Pressed Action Function
+    func collectionViewCellPressedAction (item: Int) -> UIViewController {
+        if item == 0 {
+            selectedNavigationControllerTitle = "Addition"
+            return PlusVC()
+        } else if item == 1 {
+            selectedNavigationControllerTitle = "Subtraction"
+            return PlusVC()
+            
+        } else if item == 2 {
+            selectedNavigationControllerTitle = "Multiply"
+            return PlusVC()
+            
+        } else if item == 3 {
+            selectedNavigationControllerTitle = "Division"
+            return PlusVC()
+        } else {
+            print("Something Wrong!")
+            return UIViewController()
         }
-
-        view.addSubview(child.view)
-        child.didMove(toParent: self)
+        
     }
-
-    func remove() {
-        willMove(toParent: nil)
-        view.removeFromSuperview()
-        removeFromParent()
+    
+    @objc func dismissSelf() {
+        self.dismiss(animated: true)
     }
 }
+
+
