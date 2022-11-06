@@ -12,7 +12,7 @@ class PlusVC: UIViewController {
     let keyboardVC = KeyboardVC()
     
     let topNumbersLabel = UILabel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,23 +20,34 @@ class PlusVC: UIViewController {
         
         add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
         configureTextField()
+        keyboardVC.keyboardDelegate = self
     }
     
     func configureTextField() {
+        
+        topNumbersLabel.font = UIFont.systemFont(ofSize: 50)
+        topNumbersLabel.textAlignment = .right
         topNumbersLabel.backgroundColor = .systemPink
         topNumbersLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(topNumbersLabel)
         NSLayoutConstraint.activate([
             topNumbersLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
-            topNumbersLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            topNumbersLabel.heightAnchor.constraint(equalToConstant: 150),
-            topNumbersLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
+            topNumbersLabel.widthAnchor.constraint(equalToConstant: view.bounds.width/2),
+            topNumbersLabel.heightAnchor.constraint(equalToConstant: 50),
+            topNumbersLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
         ])
         
     }
-    
-    
-    
+  
+
+}
+
+
+extension PlusVC: keyboardTextDelegate {
+    func keyboardTapped(numbers: Int) {
+        topNumbersLabel.text = "\(numbers)"
+        print("oldu\(numbers)")
+    }
 
 }
 
