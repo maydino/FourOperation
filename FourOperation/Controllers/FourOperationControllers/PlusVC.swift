@@ -11,12 +11,12 @@ class PlusVC: UIViewController {
 
     let keyboardVC = KeyboardVC()
     
-    let topNumbersLabel = UILabel()
+    let topNumbersLabel = FOTitleLabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemGray
+        view.backgroundColor = .systemMint
         
         add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
         configureTextField()
@@ -25,10 +25,7 @@ class PlusVC: UIViewController {
     
     func configureTextField() {
         
-        topNumbersLabel.font = UIFont.systemFont(ofSize: 50)
-        topNumbersLabel.textAlignment = .right
-        topNumbersLabel.backgroundColor = .systemPink
-        topNumbersLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(topNumbersLabel)
         NSLayoutConstraint.activate([
             topNumbersLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
