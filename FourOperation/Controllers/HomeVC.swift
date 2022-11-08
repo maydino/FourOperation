@@ -98,10 +98,10 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     // Collection View Cell Pressed Action Function
     func collectionViewCellPressedAction (item: Int) -> UIViewController {
         if item == 0 {
-            selectedNavigationControllerTitle = "Addition"
+            selectedNavigationControllerTitle = "Add"
             return PlusVC()
         } else if item == 1 {
-            selectedNavigationControllerTitle = "Subtraction"
+            selectedNavigationControllerTitle = "Subtract"
             return PlusVC()
             
         } else if item == 2 {
@@ -109,7 +109,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
             return PlusVC()
             
         } else if item == 3 {
-            selectedNavigationControllerTitle = "Division"
+            selectedNavigationControllerTitle = "Divide"
             return PlusVC()
         } else {
             print("Something Wrong!")

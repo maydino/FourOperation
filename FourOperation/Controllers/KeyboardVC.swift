@@ -8,15 +8,15 @@
 import UIKit
 
 protocol keyboardTextDelegate {
-    func keyboardTapped(numbers: Int)
+    func keyboardTapped(numbers: [Int])
 }
 
 class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: UICollectionViewFlowLayout())
-    
     var keyboardDelegate: keyboardTextDelegate!
     
+    var numPadNumbers = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -111,7 +111,8 @@ class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { collectionView.deselectItem(at: indexPath, animated: true)
         print("Selected a section: \(indexPath.section) X \(indexPath.row)")
-        keyboardDelegate.keyboardTapped(numbers: indexPath.row + 1)
+        numPadNumbers.append(indexPath.row+1)
+        keyboardDelegate.keyboardTapped(numbers: numPadNumbers)
 
         
     }
