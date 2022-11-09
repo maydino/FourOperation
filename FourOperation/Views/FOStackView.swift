@@ -20,9 +20,9 @@ class FOStackView: UIStackView {
     
     func configure() {
         axis = .vertical
-        distribution = .equalSpacing
+        distribution = .fillEqually
         backgroundColor = .systemPink
         translatesAutoresizingMaskIntoConstraints = false
-        layer.cornerRadius = 30
+        layer.cornerRadius = 20
     }
 }

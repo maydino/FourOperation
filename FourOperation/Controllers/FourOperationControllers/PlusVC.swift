@@ -16,7 +16,7 @@ class PlusVC: UIViewController {
     
     //MARK: - Answer Counters
     var wrongAnswerCounter = 0
-    var rightAnswerCounter = 0
+    var correctAnswerCounter = 0
 
     //MARK: - Import ViewControllers
     let keyboardVC = KeyboardVC()
@@ -30,8 +30,8 @@ class PlusVC: UIViewController {
     let calculationView = FOView()
     
     let resultStackView = FOStackView()
-    let correctAnswerLabel = FOTitleLabel()
-    let wrongAnswerLabel = FOTitleLabel()
+    let correctAnswerLabel = FOLabel(textAlignment: .left, fontSize: 22)
+    let wrongAnswerLabel = FOLabel(textAlignment: .left, fontSize: 22)
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +72,7 @@ class PlusVC: UIViewController {
         
         calculationView.backgroundColor = .systemPink
         calculationView.translatesAutoresizingMaskIntoConstraints = false
-        calculationView.layer.cornerRadius = 30
+        calculationView.layer.cornerRadius = 20
         calculationView.layer.masksToBounds = true
 
         //MARK: - Calculation View SubViews
@@ -83,10 +83,9 @@ class PlusVC: UIViewController {
         calculationView.addSubview(resultLabel)
         
         //MARK: - Result Stack View Components
-        correctAnswerLabel.text = "Correct Answer"
-        wrongAnswerLabel.text = "wrong answer"
+        correctAnswerLabel.text = "   Correct Answer: \(correctAnswerCounter)"
+        wrongAnswerLabel.text = "   Wrong answer: \(wrongAnswerCounter)"
         
-    
         resultStackView.addArrangedSubview(correctAnswerLabel)
         resultStackView.addArrangedSubview(wrongAnswerLabel)
         
@@ -132,8 +131,8 @@ class PlusVC: UIViewController {
             
             //MARK: - Result Stack View Constraints
             resultStackView.topAnchor.constraint(equalTo: calculationView.bottomAnchor, constant: 25),
-            resultStackView.widthAnchor.constraint(equalToConstant: 7*view.bounds.width/10),
-            resultStackView.heightAnchor.constraint(equalToConstant: 100),
+            resultStackView.widthAnchor.constraint(equalToConstant: view.bounds.width/2),
+            resultStackView.heightAnchor.constraint(equalToConstant: 80),
             resultStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
             
         ])
@@ -153,9 +152,9 @@ extension PlusVC: keyboardTextDelegate {
         print(">>>>>>>>>")
         
         for i in numbers {
-            if (wrongAnswerCounter + rightAnswerCounter) >= 10 {
+            if (wrongAnswerCounter + correctAnswerCounter) >= 10 {
                 wrongAnswerCounter = 0
-                rightAnswerCounter = 0
+                correctAnswerCounter = 0
                 print("game end")
                 return
             }
@@ -170,7 +169,7 @@ extension PlusVC: keyboardTextDelegate {
             } else if i == 12 {
                 if (firstNumber + secondNumber) == Int(showNumbersAsString) {
                     print("You got it Mutlu!")
-                    rightAnswerCounter += 1
+                    correctAnswerCounter += 1
                     showNumbersAsString = ""
                     keyboardVC.numPadNumbers = [Int]()
                     self.viewDidLoad()

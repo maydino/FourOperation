@@ -18,6 +18,7 @@
 		B1B2F99029189FE600E0356E /* FOTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */; };
 		B1B50C63291A1EAC00DFE170 /* FOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C62291A1EAC00DFE170 /* FOView.swift */; };
 		B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C64291B70A300DFE170 /* FOStackView.swift */; };
+		B1B50C67291B71D600DFE170 /* FOLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C66291B71D600DFE170 /* FOLabel.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOTitleLabel.swift; sourceTree = "<group>"; };
 		B1B50C62291A1EAC00DFE170 /* FOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOView.swift; sourceTree = "<group>"; };
 		B1B50C64291B70A300DFE170 /* FOStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOStackView.swift; sourceTree = "<group>"; };
+		B1B50C66291B71D600DFE170 /* FOLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOLabel.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */,
 				B1B50C62291A1EAC00DFE170 /* FOView.swift */,
 				B1B50C64291B70A300DFE170 /* FOStackView.swift */,
+				B1B50C66291B71D600DFE170 /* FOLabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */,
 				B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */,
 				B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */,
+				B1B50C67291B71D600DFE170 /* FOLabel.swift in Sources */,
 				B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */,
 				B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */,
 				B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */,
