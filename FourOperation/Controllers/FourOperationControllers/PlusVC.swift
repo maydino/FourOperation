@@ -28,6 +28,10 @@ class PlusVC: UIViewController {
     let lineLabel = UILabel()
     let resultLabel = FOTitleLabel()
     let calculationView = FOView()
+    
+    let resultStackView = FOStackView()
+    let correctAnswerLabel = FOTitleLabel()
+    let wrongAnswerLabel = FOTitleLabel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,29 +72,36 @@ class PlusVC: UIViewController {
         
         calculationView.backgroundColor = .systemPink
         calculationView.translatesAutoresizingMaskIntoConstraints = false
-        calculationView.layer.cornerRadius = 40
+        calculationView.layer.cornerRadius = 30
         calculationView.layer.masksToBounds = true
 
-        //MARK: - StackView SubViews
+        //MARK: - Calculation View SubViews
         calculationView.addSubview(firstRowLabel)
         calculationView.addSubview(secondRowLabel)
         calculationView.addSubview(operatorLabel)
         calculationView.addSubview(lineLabel)
         calculationView.addSubview(resultLabel)
         
+        //MARK: - Result Stack View Components
+        correctAnswerLabel.text = "Correct Answer"
+        wrongAnswerLabel.text = "wrong answer"
+        
+    
+        resultStackView.addArrangedSubview(correctAnswerLabel)
+        resultStackView.addArrangedSubview(wrongAnswerLabel)
+        
         view.addSubview(calculationView)
+        view.addSubview(resultStackView)
 
         NSLayoutConstraint.activate([
             //MARK: - First Row Label
             firstRowLabel.topAnchor.constraint(equalTo: calculationView.topAnchor, constant: 0),
-
             firstRowLabel.heightAnchor.constraint(equalToConstant: 80),
             firstRowLabel.leadingAnchor.constraint(equalTo: calculationView.leadingAnchor, constant: 0),
             firstRowLabel.trailingAnchor.constraint(equalTo: calculationView.trailingAnchor, constant: -20),
             
             //MARK: - Second Row Label
             secondRowLabel.topAnchor.constraint(equalTo: firstRowLabel.bottomAnchor, constant: 0),
-
             secondRowLabel.heightAnchor.constraint(equalToConstant: 80),
             secondRowLabel.leadingAnchor.constraint(equalTo: calculationView.leadingAnchor, constant: 0),
             secondRowLabel.trailingAnchor.constraint(equalTo: calculationView.trailingAnchor, constant: -20),
@@ -113,11 +124,18 @@ class PlusVC: UIViewController {
             resultLabel.leadingAnchor.constraint(equalTo: calculationView.leadingAnchor, constant: 0),
             resultLabel.trailingAnchor.constraint(equalTo: calculationView.trailingAnchor, constant: -20),
 
-            //MARK: - Stack View Constraints
-            calculationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            //MARK: - Calculation View Constraints
+            calculationView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             calculationView.widthAnchor.constraint(equalToConstant: 7*view.bounds.width/10),
             calculationView.heightAnchor.constraint(equalToConstant: 250),
-            calculationView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+            calculationView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            
+            //MARK: - Result Stack View Constraints
+            resultStackView.topAnchor.constraint(equalTo: calculationView.bottomAnchor, constant: 25),
+            resultStackView.widthAnchor.constraint(equalToConstant: 7*view.bounds.width/10),
+            resultStackView.heightAnchor.constraint(equalToConstant: 100),
+            resultStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
+            
         ])
     }
     
