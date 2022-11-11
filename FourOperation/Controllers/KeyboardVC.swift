@@ -11,7 +11,7 @@ protocol keyboardTextDelegate {
     func keyboardTapped(numbers: [Int])
 }
 
-class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+final class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     var collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: 0, height: 0), collectionViewLayout: UICollectionViewFlowLayout())
     var keyboardDelegate: keyboardTextDelegate!

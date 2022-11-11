@@ -20,6 +20,7 @@ class PlusVC: UIViewController {
 
     //MARK: - Import ViewControllers
     let keyboardVC = KeyboardVC()
+    let wrongAnswerVC = WrongAnswerVC()
     
     //MARK: - View Layers
     let firstRowLabel = FOTitleLabel()
@@ -38,6 +39,7 @@ class PlusVC: UIViewController {
 
         //MARK: - Add Imported VCs
         add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
+        
         
         //MARK: - Additional Methods
         getRandomNumbers()
@@ -152,12 +154,7 @@ extension PlusVC: keyboardTextDelegate {
         print(">>>>>>>>>")
         
         for i in numbers {
-            if (wrongAnswerCounter + correctAnswerCounter) >= 10 {
-                wrongAnswerCounter = 0
-                correctAnswerCounter = 0
-                print("game end")
-                return
-            }
+            
             if i == 10 && showNumbersAsString != "" {
                 showNumbersAsString.removeLast()
                 continue
@@ -187,6 +184,12 @@ extension PlusVC: keyboardTextDelegate {
             } else {
                 showNumbersAsString += "\(i)"
             }
+        }
+        if (wrongAnswerCounter + correctAnswerCounter) >= 5 {
+            wrongAnswerCounter = 0
+            correctAnswerCounter = 0
+            print("game end")
+            return
         }
         resultLabel.text = showNumbersAsString
     }
