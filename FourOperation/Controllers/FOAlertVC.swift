@@ -10,8 +10,8 @@ import UIKit
 class FOAlertVC: UIViewController {
 
     let containerView = UIView()
-    let titleLabel = FOTitleLabel()
-    let messageLabel = FOTitleLabel()
+    let titleLabel = FOLabel(textAlignment: .center, fontSize: 30)
+    let messageLabel = FOBodyLabel(textAlignment: .center)
     
     var alertTitle: String?
     var message: String?
@@ -56,7 +56,7 @@ class FOAlertVC: UIViewController {
     
     func configureTitleLabel() {
         containerView.addSubview(titleLabel)
-        titleLabel.text = alertTitle ?? "Oppps! Try again."
+        titleLabel.text = alertTitle ?? "Wrong Answer"
         titleLabel.textColor = AppColors.textColor
                 
         NSLayoutConstraint.activate([

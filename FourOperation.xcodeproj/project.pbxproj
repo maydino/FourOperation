@@ -25,6 +25,7 @@
 		B1D5F970291DB8000029C9D2 /* FOColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F96F291DB8000029C9D2 /* FOColors.swift */; };
 		B1D5F972291E09760029C9D2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F971291E09760029C9D2 /* SettingVC.swift */; };
 		B1D5F974291F004B0029C9D2 /* FOAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */; };
+		B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,7 @@
 		B1D5F96F291DB8000029C9D2 /* FOColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOColors.swift; sourceTree = "<group>"; };
 		B1D5F971291E09760029C9D2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOAlertVC.swift; sourceTree = "<group>"; };
+		B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOBodyLabel.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,9 +99,10 @@
 			children = (
 				B1E407CF2913FA38004A3326 /* Cells */,
 				B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */,
+				B1B50C66291B71D600DFE170 /* FOLabel.swift */,
+				B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */,
 				B1B50C62291A1EAC00DFE170 /* FOView.swift */,
 				B1B50C64291B70A300DFE170 /* FOStackView.swift */,
-				B1B50C66291B71D600DFE170 /* FOLabel.swift */,
 				B1D5F96B291DB76B0029C9D2 /* Utilities */,
 				B1D5F96C291DB77F0029C9D2 /* Support */,
 			);
@@ -250,6 +253,7 @@
 				B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */,
 				B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */,
 				B1D5F974291F004B0029C9D2 /* FOAlertVC.swift in Sources */,
+				B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */,
 				B1D5F96A291DB71B0029C9D2 /* FOTabBarVC.swift in Sources */,
 				B1B2F99029189FE600E0356E /* FOTitleLabel.swift in Sources */,
 				B102ADDB290E1E6A00C6DBA7 /* SceneDelegate.swift in Sources */,
