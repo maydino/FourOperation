@@ -29,7 +29,7 @@ class PlusVC: UIViewController {
     let lineLabel = UILabel()
     let resultLabel = FOTitleLabel()
     let calculationView = FOView()
-    
+
     let resultStackView = FOStackView()
     let correctAnswerLabel = FOLabel(textAlignment: .left, fontSize: 22)
     let wrongAnswerLabel = FOLabel(textAlignment: .left, fontSize: 22)
@@ -40,13 +40,12 @@ class PlusVC: UIViewController {
         //MARK: - Add Imported VCs
         add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
         
-        
         //MARK: - Additional Methods
         getRandomNumbers()
         
         //MARK: - Configurations
         configureTextField()
-        view.backgroundColor = .systemMint
+        view.backgroundColor = AppColors.backgroundColor
 
         //MARK: - Delegate
         keyboardVC.keyboardDelegate = self
@@ -67,15 +66,14 @@ class PlusVC: UIViewController {
         
         //MARK: - Line Label Configure
         lineLabel.translatesAutoresizingMaskIntoConstraints = false
-        lineLabel.layer.borderColor = UIColor.white.cgColor
+        lineLabel.layer.borderColor = AppColors.backgroundColor?.cgColor
         lineLabel.layer.borderWidth = 3
         
         //MARK: - Result Row Configure
-        
-        calculationView.backgroundColor = .systemPink
-        calculationView.translatesAutoresizingMaskIntoConstraints = false
+        calculationView.backgroundColor = AppColors.labelBackgroundColor
         calculationView.layer.cornerRadius = 20
         calculationView.layer.masksToBounds = true
+        calculationView.alpha = 0.5
 
         //MARK: - Calculation View SubViews
         calculationView.addSubview(firstRowLabel)
@@ -85,8 +83,11 @@ class PlusVC: UIViewController {
         calculationView.addSubview(resultLabel)
         
         //MARK: - Result Stack View Components
-        correctAnswerLabel.text = "   Correct Answer: \(correctAnswerCounter)"
-        wrongAnswerLabel.text = "   Wrong answer: \(wrongAnswerCounter)"
+        correctAnswerLabel.text = "Correct Answer: \(correctAnswerCounter)"
+        correctAnswerLabel.textAlignment = .center
+        
+        wrongAnswerLabel.text = "Wrong answer: \(wrongAnswerCounter)"
+        wrongAnswerLabel.textAlignment = .center
         
         resultStackView.addArrangedSubview(correctAnswerLabel)
         resultStackView.addArrangedSubview(wrongAnswerLabel)
@@ -148,6 +149,7 @@ class PlusVC: UIViewController {
 }
 
 extension PlusVC: keyboardTextDelegate {
+    
     func keyboardTapped(numbers: [Int]) {
         var showNumbersAsString = ""
         

@@ -12,7 +12,7 @@ class SettingVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(named: AppColors.backgroundColor)
+        view.backgroundColor = AppColors.backgroundColor
         
     }
     

@@ -16,9 +16,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemRed
-        
+                
         configureCollectionView()
         
     }
@@ -31,7 +29,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        collectionView.backgroundColor = .cyan
+        collectionView.backgroundColor = AppColors.backgroundColor
         collectionView.register(FOCollectionViewCell.self, forCellWithReuseIdentifier: FOCollectionViewCell.identifier)
 
     }
@@ -58,11 +56,11 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FOCollectionViewCell.identifier, for: indexPath)
-        cell.backgroundColor = .darkGray
+        cell.backgroundColor = AppColors.cellColor
         
         let imageView = UIImageView()
         imageView.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/4, width: cell.bounds.width/2, height: cell.bounds.width/2)
-        imageView.tintColor = .systemTeal
+        imageView.tintColor = AppColors.textColor
 
         
         if indexPath.item == 0 {

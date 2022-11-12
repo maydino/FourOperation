@@ -31,9 +31,7 @@ class KeyboardCell: UICollectionViewCell {
     
     private func configure() {
         layer.cornerRadius = 10
-        clipsToBounds = true
-        layer.backgroundColor = UIColor.systemPink.cgColor
-        
+        clipsToBounds = true        
 
     }
 }

@@ -20,7 +20,6 @@ class FOView: UIView {
     
     func configure() {
         //MARK: - Stack View Configure
-        backgroundColor = .systemPink
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 40
         layer.masksToBounds = true

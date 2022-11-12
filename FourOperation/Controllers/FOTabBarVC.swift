@@ -15,9 +15,9 @@ class FOTabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UITabBar.appearance().tintColor = UIColor(named: AppColors.textColorH)
-        UITabBar.appearance().selectedImageTintColor = UIColor(named: AppColors.textColor)
-        UITabBar.appearance().backgroundColor = UIColor(named: AppColors.buttonColor)
+        UITabBar.appearance().tintColor = AppColors.textColorH
+        UITabBar.appearance().selectedImageTintColor = AppColors.textColor
+        UITabBar.appearance().backgroundColor =  AppColors.buttonColor
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
         UITabBarItem.appearance().setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
         additionalSafeAreaInsets.bottom = 10
