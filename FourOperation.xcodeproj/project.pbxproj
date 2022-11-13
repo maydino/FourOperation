@@ -27,6 +27,7 @@
 		B1D5F974291F004B0029C9D2 /* FOAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */; };
 		B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */; };
 		B1D5F9782920ABB40029C9D2 /* SubtractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */; };
+		B1D5F97A29215AFD0029C9D2 /* MultiplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F97929215AFD0029C9D2 /* MultiplyVC.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOAlertVC.swift; sourceTree = "<group>"; };
 		B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOBodyLabel.swift; sourceTree = "<group>"; };
 		B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractVC.swift; sourceTree = "<group>"; };
+		B1D5F97929215AFD0029C9D2 /* MultiplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyVC.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			children = (
 				B1B115A62914CCC300DB8225 /* PlusVC.swift */,
 				B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */,
+				B1D5F97929215AFD0029C9D2 /* MultiplyVC.swift */,
 			);
 			path = FourOperationControllers;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1D5F970291DB8000029C9D2 /* FOColors.swift in Sources */,
+				B1D5F97A29215AFD0029C9D2 /* MultiplyVC.swift in Sources */,
 				B102ADDD290E1E6A00C6DBA7 /* HomeVC.swift in Sources */,
 				B1B50C63291A1EAC00DFE170 /* FOView.swift in Sources */,
 				B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */,

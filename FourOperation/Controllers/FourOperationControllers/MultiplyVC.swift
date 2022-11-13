@@ -1,13 +1,13 @@
 //
-//  PlusVC.swift
+//  MultiplyVC.swift
 //  FourOperation
 //
-//  Created by Mutlu Aydin on 11/3/22.
+//  Created by Mutlu Aydin on 11/13/22.
 //
 
 import UIKit
 
-class PlusVC: UIViewController {
+class MultiplyVC: UIViewController {
     
     //MARK: - Properties
     let allNumbers = [1,2,3,4,5,6,7,8,9]
@@ -60,7 +60,7 @@ class PlusVC: UIViewController {
         secondRowLabel.text = "\(secondNumber)"
         
         //MARK: - Second Row Configure
-        operatorLabel.text = " +"
+        operatorLabel.text = " x"
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
         
@@ -148,7 +148,7 @@ class PlusVC: UIViewController {
 }
 
 // For keyboard
-extension PlusVC: keyboardTextDelegate {
+extension MultiplyVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
         var showNumbersAsString = ""
@@ -166,7 +166,7 @@ extension PlusVC: keyboardTextDelegate {
                 showNumbersAsString += "0"
                 continue
             } else if i == 12 {
-                if (firstNumber + secondNumber) == Int(showNumbersAsString) {
+                if (firstNumber * secondNumber) == Int(showNumbersAsString) {
                     print("You got it Mutlu!")
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
@@ -179,7 +179,7 @@ extension PlusVC: keyboardTextDelegate {
                     wrongAnswerCounter += 1
                     
                     // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber+secondNumber)")
+                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber * secondNumber)")
                     present(alert, animated: true)
                     
                     print("Oppss wrong asnwer, try again...")

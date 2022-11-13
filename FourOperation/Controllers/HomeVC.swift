@@ -104,7 +104,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
             
         } else if item == 2 {
             selectedNavigationControllerTitle = "Multiply"
-            return PlusVC()
+            return MultiplyVC()
             
         } else if item == 3 {
             selectedNavigationControllerTitle = "Divide"
