@@ -1,19 +1,19 @@
 //
-//  SubtractVC.swift
+//  DivideVC.swift
 //  FourOperation
 //
-//  Created by Mutlu Aydin on 11/12/22.
+//  Created by Mutlu Aydin on 11/13/22.
 //
 
 import UIKit
 
-class SubtractVC: UIViewController {
-
+class DivideVC: UIViewController {
+    
     //MARK: - Properties
     let allNumbers = [1,2,3,4,5,6,7,8,9]
     var firstNumber = 0
     var secondNumber = 0
-    var randomNumberIndex = 0
+    var resultNumber = 0
     
     //MARK: - Answer Counters
     var wrongAnswerCounter = 0
@@ -61,10 +61,10 @@ class SubtractVC: UIViewController {
         secondRowLabel.text = "\(secondNumber)"
         
         //MARK: - Second Row Configure
-        operatorLabel.text = " ➖"
+        operatorLabel.text = " ➗"
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
-        
+
         //MARK: - Line Label Configure
         lineLabel.translatesAutoresizingMaskIntoConstraints = false
         lineLabel.layer.borderColor = FOColors.backgroundColor?.cgColor
@@ -144,16 +144,17 @@ class SubtractVC: UIViewController {
     // Pick a random number
     func getRandomNumbers() {
         
-        randomNumberIndex = Int.random(in: 0..<9)
-        print("hellooooo \(randomNumberIndex)")
-        secondNumber = allNumbers[randomNumberIndex]
-        firstNumber = Int.random(in: (randomNumberIndex+1)..<10)
+        resultNumber = allNumbers.randomElement() ?? 0
+        secondNumber = allNumbers.randomElement() ?? 0
+
+        firstNumber = resultNumber * secondNumber
+        
         
     }
 }
 
 // For keyboard
-extension SubtractVC: keyboardTextDelegate {
+extension DivideVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
         var showNumbersAsString = ""
@@ -171,7 +172,7 @@ extension SubtractVC: keyboardTextDelegate {
                 showNumbersAsString += "0"
                 continue
             } else if i == 12 {
-                if (firstNumber - secondNumber) == Int(showNumbersAsString) {
+                if resultNumber == Int(showNumbersAsString) {
                     print("You got it Mutlu!")
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
@@ -184,13 +185,11 @@ extension SubtractVC: keyboardTextDelegate {
                     wrongAnswerCounter += 1
                     
                     // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber - secondNumber)")
+                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(resultNumber)")
                     present(alert, animated: true)
                     
-                    print("Oppss wrong asnwer, try again...")
+                    print("Oppss wrong answer, try again...")
                     keyboardVC.numPadNumbers = [Int]()
-                    
-                    // Reload the page
                     self.viewDidLoad()
 
                     continue

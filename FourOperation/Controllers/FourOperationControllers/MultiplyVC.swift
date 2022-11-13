@@ -60,7 +60,7 @@ class MultiplyVC: UIViewController {
         secondRowLabel.text = "\(secondNumber)"
         
         //MARK: - Second Row Configure
-        operatorLabel.text = " x"
+        operatorLabel.text = " ✖️"
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
         

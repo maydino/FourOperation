@@ -60,7 +60,7 @@ class PlusVC: UIViewController {
         secondRowLabel.text = "\(secondNumber)"
         
         //MARK: - Second Row Configure
-        operatorLabel.text = " +"
+        operatorLabel.text = " ➕"
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
         
@@ -179,7 +179,7 @@ extension PlusVC: keyboardTextDelegate {
                     wrongAnswerCounter += 1
                     
                     // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber+secondNumber)")
+                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber + secondNumber)")
                     present(alert, animated: true)
                     
                     print("Oppss wrong asnwer, try again...")

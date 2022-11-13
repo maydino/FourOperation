@@ -28,6 +28,7 @@
 		B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */; };
 		B1D5F9782920ABB40029C9D2 /* SubtractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */; };
 		B1D5F97A29215AFD0029C9D2 /* MultiplyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F97929215AFD0029C9D2 /* MultiplyVC.swift */; };
+		B1D5F97E292163940029C9D2 /* DivideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F97D292163940029C9D2 /* DivideVC.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOBodyLabel.swift; sourceTree = "<group>"; };
 		B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractVC.swift; sourceTree = "<group>"; };
 		B1D5F97929215AFD0029C9D2 /* MultiplyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplyVC.swift; sourceTree = "<group>"; };
+		B1D5F97D292163940029C9D2 /* DivideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideVC.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				B1B115A62914CCC300DB8225 /* PlusVC.swift */,
 				B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */,
 				B1D5F97929215AFD0029C9D2 /* MultiplyVC.swift */,
+				B1D5F97D292163940029C9D2 /* DivideVC.swift */,
 			);
 			path = FourOperationControllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				B1B50C67291B71D600DFE170 /* FOLabel.swift in Sources */,
 				B1D5F96E291DB7B70029C9D2 /* FOFont.swift in Sources */,
 				B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */,
+				B1D5F97E292163940029C9D2 /* DivideVC.swift in Sources */,
 				B1D5F972291E09760029C9D2 /* SettingVC.swift in Sources */,
 				B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */,
 				B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */,
