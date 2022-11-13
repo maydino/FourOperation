@@ -1,14 +1,14 @@
 //
-//  PlusVC.swift
+//  SubtractVC.swift
 //  FourOperation
 //
-//  Created by Mutlu Aydin on 11/3/22.
+//  Created by Mutlu Aydin on 11/12/22.
 //
 
 import UIKit
 
-class PlusVC: UIViewController {
-    
+class SubtractVC: UIViewController {
+
     //MARK: - Properties
     let allNumbers = [1,2,3,4,5,6,7,8,9]
     var firstNumber = 0
@@ -60,7 +60,7 @@ class PlusVC: UIViewController {
         secondRowLabel.text = "\(secondNumber)"
         
         //MARK: - Second Row Configure
-        operatorLabel.text = "+"
+        operatorLabel.text = "-"
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
         
@@ -148,7 +148,7 @@ class PlusVC: UIViewController {
 }
 
 // For keyboard
-extension PlusVC: keyboardTextDelegate {
+extension SubtractVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
         var showNumbersAsString = ""

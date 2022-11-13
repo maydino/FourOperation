@@ -34,7 +34,7 @@ final class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollecti
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        collectionView.backgroundColor = AppColors.backgroundColor
+        collectionView.backgroundColor = FOColors.backgroundColor
         collectionView.register(KeyboardCell.self, forCellWithReuseIdentifier: KeyboardCell.identifier)
 
     }
@@ -66,15 +66,15 @@ final class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: KeyboardCell.identifier, for: indexPath)
-        cell.backgroundColor = AppColors.buttonColor
+        cell.backgroundColor = FOColors.buttonColor
         
         let imageView = UIImageView()
         imageView.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.height/4, width: cell.bounds.width/2, height: cell.bounds.height/2)
-        imageView.tintColor = AppColors.textColorH
+        imageView.tintColor = FOColors.textColorH
         
         let textLabel = UILabel()
         textLabel.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.height/4, width: cell.bounds.width/2, height: cell.bounds.height/2)
-        textLabel.textColor = AppColors.textColor
+        textLabel.textColor = FOColors.textColor
         textLabel.textAlignment = .center
         textLabel.font = textLabel.font.withSize(30)
         

@@ -32,7 +32,7 @@ class FOCollectionViewCell: UICollectionViewCell {
     private func configure() {
         layer.cornerRadius = 10
         clipsToBounds = true
-        layer.backgroundColor = AppColors.cellColor?.cgColor
+        layer.backgroundColor = FOColors.cellColor?.cgColor
         
 
     }

@@ -26,6 +26,7 @@
 		B1D5F972291E09760029C9D2 /* SettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F971291E09760029C9D2 /* SettingVC.swift */; };
 		B1D5F974291F004B0029C9D2 /* FOAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */; };
 		B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */; };
+		B1D5F9782920ABB40029C9D2 /* SubtractVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,7 @@
 		B1D5F971291E09760029C9D2 /* SettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingVC.swift; sourceTree = "<group>"; };
 		B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOAlertVC.swift; sourceTree = "<group>"; };
 		B1D5F975291F89560029C9D2 /* FOBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOBodyLabel.swift; sourceTree = "<group>"; };
+		B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractVC.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B1B115A62914CCC300DB8225 /* PlusVC.swift */,
+				B1D5F9772920ABB40029C9D2 /* SubtractVC.swift */,
 			);
 			path = FourOperationControllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */,
 				B1D5F974291F004B0029C9D2 /* FOAlertVC.swift in Sources */,
 				B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */,
+				B1D5F9782920ABB40029C9D2 /* SubtractVC.swift in Sources */,
 				B1D5F96A291DB71B0029C9D2 /* FOTabBarVC.swift in Sources */,
 				B1B2F99029189FE600E0356E /* FOTitleLabel.swift in Sources */,
 				B102ADDB290E1E6A00C6DBA7 /* SceneDelegate.swift in Sources */,

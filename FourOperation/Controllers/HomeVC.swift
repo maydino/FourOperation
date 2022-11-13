@@ -29,7 +29,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        collectionView.backgroundColor = AppColors.backgroundColor
+        collectionView.backgroundColor = FOColors.backgroundColor
         collectionView.register(FOCollectionViewCell.self, forCellWithReuseIdentifier: FOCollectionViewCell.identifier)
 
     }
@@ -56,11 +56,11 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FOCollectionViewCell.identifier, for: indexPath)
-        cell.backgroundColor = AppColors.cellColor
+        cell.backgroundColor = FOColors.cellColor
         
         let imageView = UIImageView()
         imageView.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.width/4, width: cell.bounds.width/2, height: cell.bounds.width/2)
-        imageView.tintColor = AppColors.textColor
+        imageView.tintColor = FOColors.textColor
 
         
         if indexPath.item == 0 {
@@ -100,7 +100,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
             return PlusVC()
         } else if item == 1 {
             selectedNavigationControllerTitle = "Subtract"
-            return PlusVC()
+            return SubtractVC()
             
         } else if item == 2 {
             selectedNavigationControllerTitle = "Multiply"

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct AppColors {
+struct FOColors {
     
     static let backgroundColor = UIColor(named: "backgroundColor")
     static let cellColor = UIColor(named: "cellColor")
