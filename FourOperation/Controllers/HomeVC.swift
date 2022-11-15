@@ -12,7 +12,6 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
     private var collectionView: UICollectionView!
     
     var selectedNavigationControllerTitle: String?
-    
         
     override func viewDidLoad() {
         super.viewDidLoad()

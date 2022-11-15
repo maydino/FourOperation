@@ -38,7 +38,7 @@ class MultiplyVC: UIViewController {
         super.viewDidLoad()
 
         //MARK: - Add Imported VCs
-        add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
+        add(childViewController: keyboardVC, to: view)
         
         //MARK: - Additional Methods
         getRandomNumbers()
@@ -152,11 +152,8 @@ extension MultiplyVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
         var showNumbersAsString = ""
-        
-        print(">>>>>>>>>")
-        
+                
         for i in numbers {
-            
             if i == 10 && showNumbersAsString != "" {
                 showNumbersAsString.removeLast()
                 continue
@@ -167,14 +164,14 @@ extension MultiplyVC: keyboardTextDelegate {
                 continue
             } else if i == 12 {
                 if (firstNumber * secondNumber) == Int(showNumbersAsString) {
-                    print("You got it Mutlu!")
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
                     keyboardVC.numPadNumbers = [Int]()
                     self.viewDidLoad()
 
                     continue
-                } else {
+                
+                } else { // Wrong answer
                     showNumbersAsString = ""
                     wrongAnswerCounter += 1
                     
@@ -182,7 +179,6 @@ extension MultiplyVC: keyboardTextDelegate {
                     let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber * secondNumber)")
                     present(alert, animated: true)
                     
-                    print("Oppss wrong asnwer, try again...")
                     keyboardVC.numPadNumbers = [Int]()
                     self.viewDidLoad()
 
@@ -192,14 +188,13 @@ extension MultiplyVC: keyboardTextDelegate {
                 showNumbersAsString += "\(i)"
             }
         }
+        // End of game
         if (wrongAnswerCounter + correctAnswerCounter) >= 5 {
             wrongAnswerCounter = 0
             correctAnswerCounter = 0
-            print("game end")
             return
         }
         resultLabel.text = showNumbersAsString
     }
-
 }
 

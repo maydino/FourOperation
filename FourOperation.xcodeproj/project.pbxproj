@@ -19,6 +19,7 @@
 		B1B50C63291A1EAC00DFE170 /* FOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C62291A1EAC00DFE170 /* FOView.swift */; };
 		B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C64291B70A300DFE170 /* FOStackView.swift */; };
 		B1B50C67291B71D600DFE170 /* FOLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C66291B71D600DFE170 /* FOLabel.swift */; };
+		B1C58EF32922DFF200E03B67 /* CalculationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C58EF22922DFF200E03B67 /* CalculationVC.swift */; };
 		B1D5F942291C91690029C9D2 /* WrongAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */; };
 		B1D5F96A291DB71B0029C9D2 /* FOTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */; };
 		B1D5F96E291DB7B70029C9D2 /* FOFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F96D291DB7B70029C9D2 /* FOFont.swift */; };
@@ -48,6 +49,7 @@
 		B1B50C62291A1EAC00DFE170 /* FOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOView.swift; sourceTree = "<group>"; };
 		B1B50C64291B70A300DFE170 /* FOStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOStackView.swift; sourceTree = "<group>"; };
 		B1B50C66291B71D600DFE170 /* FOLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOLabel.swift; sourceTree = "<group>"; };
+		B1C58EF22922DFF200E03B67 /* CalculationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationVC.swift; sourceTree = "<group>"; };
 		B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerVC.swift; sourceTree = "<group>"; };
 		B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOTabBarVC.swift; sourceTree = "<group>"; };
 		B1D5F96D291DB7B70029C9D2 /* FOFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOFont.swift; sourceTree = "<group>"; };
@@ -118,9 +120,9 @@
 		B102ADEF2912218A00C6DBA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B1C58EF42922E00500E03B67 /* SubVC */,
 				B1B115A52914CC8500DB8225 /* FourOperationControllers */,
 				B102ADDC290E1E6A00C6DBA7 /* HomeVC.swift */,
-				B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */,
 				B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */,
 				B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */,
 				B1D5F971291E09760029C9D2 /* SettingVC.swift */,
@@ -146,6 +148,15 @@
 				B1B115A92915F8A000DB8225 /* VC+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1C58EF42922E00500E03B67 /* SubVC */ = {
+			isa = PBXGroup;
+			children = (
+				B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */,
+				B1C58EF22922DFF200E03B67 /* CalculationVC.swift */,
+			);
+			path = SubVC;
 			sourceTree = "<group>";
 		};
 		B1D5F96B291DB76B0029C9D2 /* Utilities */ = {
@@ -262,6 +273,7 @@
 				B1D5F972291E09760029C9D2 /* SettingVC.swift in Sources */,
 				B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */,
 				B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */,
+				B1C58EF32922DFF200E03B67 /* CalculationVC.swift in Sources */,
 				B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */,
 				B1D5F974291F004B0029C9D2 /* FOAlertVC.swift in Sources */,
 				B1D5F976291F89560029C9D2 /* FOBodyLabel.swift in Sources */,

@@ -30,7 +30,7 @@ class KeyboardCell: UICollectionViewCell {
     }
     
     private func configure() {
-        layer.cornerRadius = 10
+        layer.cornerRadius = 20
         clipsToBounds = true        
 
     }

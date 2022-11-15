@@ -39,8 +39,7 @@ class SubtractVC: UIViewController {
         super.viewDidLoad()
 
         //MARK: - Add Imported VCs
-        add(keyboardVC, frame: CGRect(x: 0, y: 500, width: view.bounds.width, height: view.bounds.height-500))
-        
+        add(childViewController: keyboardVC, to: view)
         //MARK: - Additional Methods
         getRandomNumbers()
         
