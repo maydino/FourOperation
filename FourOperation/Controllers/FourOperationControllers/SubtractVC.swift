@@ -31,10 +31,10 @@ class SubtractVC: UIViewController {
         
         //MARK: - Add Imported VCs
         add(childViewController: keyboardVC, to: view)
-        configureCalculationVC()
         
         //MARK: - Configurations
         view.backgroundColor = FOColors.backgroundColor
+        configureCalculationVC()
         
         //MARK: - Delegate
         keyboardVC.keyboardDelegate = self
@@ -52,12 +52,10 @@ class SubtractVC: UIViewController {
         view.addSubview(calculationVC.view)
         
         NSLayoutConstraint.activate([
-            
             calculationVC.view.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             calculationVC.view.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             calculationVC.view.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             calculationVC.view.bottomAnchor.constraint(equalTo: keyboardVC.view.topAnchor, constant: 0)
-            
         ])
         
         calculationVC.didMove(toParent: self)
