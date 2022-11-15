@@ -37,7 +37,6 @@ class CalculationVC: UIViewController {
         
         
         //MARK: - Second Row Configure
-        operatorLabel.text = " ➕"
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
         

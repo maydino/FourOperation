@@ -18,7 +18,7 @@ class PlusVC: UIViewController {
     var wrongAnswerCounter = 0
     var correctAnswerCounter = 0
     
-    //MARK: - Import ViewControllers
+    //MARK: - Sub ViewControllers
     let keyboardVC = KeyboardVC()
     let wrongAnswerVC = WrongAnswerVC()
     let calculationVC = CalculationVC()
@@ -43,6 +43,7 @@ class PlusVC: UIViewController {
     func configureCalculationVC() {
         calculationVC.firstRowLabel.text = "\(firstNumber)"
         calculationVC.secondRowLabel.text = "\(secondNumber)"
+        calculationVC.operatorLabel.text = " ➕"
         calculationVC.correctAnswerLabel.text = "Correct Answer: \(correctAnswerCounter)"
         calculationVC.wrongAnswerLabel.text = "Wrong answer: \(wrongAnswerCounter)"
         

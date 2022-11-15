@@ -56,7 +56,7 @@ class FOAlertVC: UIViewController {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 54),
+            containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 37),
             containerView.widthAnchor.constraint(equalToConstant: 7*view.bounds.width/10),
             containerView.heightAnchor.constraint(equalToConstant: 250),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
