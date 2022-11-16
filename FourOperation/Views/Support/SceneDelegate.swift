@@ -11,6 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    private let darkModeOn = UserDefaultKey.defaults.bool(forKey: UserDefaultKey.changeModeOn)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -19,6 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
         window?.rootViewController = FOTabBarVC()
+        
+        if darkModeOn {
+            window?.overrideUserInterfaceStyle = .dark
+
+        } else {
+            window?.overrideUserInterfaceStyle = .light
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

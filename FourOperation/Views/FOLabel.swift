@@ -28,7 +28,7 @@ class FOLabel: UILabel {
     
     
     func configure() {
-        textColor = .label
+        textColor = FOColors.textColor
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
