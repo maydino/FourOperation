@@ -76,7 +76,7 @@ final class KeyboardVC: UIViewController, UICollectionViewDataSource, UICollecti
         textLabel.frame = CGRect(x: cell.bounds.width/4, y: cell.bounds.height/4, width: cell.bounds.width/2, height: cell.bounds.height/2)
         textLabel.textColor = FOColors.textColor
         textLabel.textAlignment = .center
-        textLabel.font = textLabel.font.withSize(30)
+        textLabel.font = UIFont(name: FOFont.textFontNormal, size: 35)
         
         if indexPath.item == 0 {
             textLabel.text = "1"

@@ -129,7 +129,7 @@
 		B102ADEF2912218A00C6DBA7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B1C58EF42922E00500E03B67 /* SubVC */,
+				B1C58EF42922E00500E03B67 /* SubVCs */,
 				B1B115A52914CC8500DB8225 /* FourOperationControllers */,
 				B102ADDC290E1E6A00C6DBA7 /* HomeVC.swift */,
 				B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */,
@@ -160,13 +160,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		B1C58EF42922E00500E03B67 /* SubVC */ = {
+		B1C58EF42922E00500E03B67 /* SubVCs */ = {
 			isa = PBXGroup;
 			children = (
 				B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */,
 				B1C58EF22922DFF200E03B67 /* CalculationVC.swift */,
 			);
-			path = SubVC;
+			path = SubVCs;
 			sourceTree = "<group>";
 		};
 		B1D5F96B291DB76B0029C9D2 /* Utilities */ = {

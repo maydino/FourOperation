@@ -25,6 +25,7 @@ class MultiplyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: FOFont.textFontNormal, size: 25)!]
         //MARK: - Additional Methods
         getRandomNumbers()
         

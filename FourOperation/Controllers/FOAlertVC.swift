@@ -50,15 +50,15 @@ class FOAlertVC: UIViewController {
         view.addSubview(containerView)
         
         containerView.backgroundColor = FOColors.buttonColor
-        containerView.layer.cornerRadius = 12
+        containerView.layer.cornerRadius = 20
         containerView.layer.borderWidth = 2
         containerView.layer.borderColor = FOColors.buttonColor?.cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 37),
+            containerView.topAnchor.constraint(equalTo: view.topAnchor, constant: 39),
             containerView.widthAnchor.constraint(equalToConstant: 7*view.bounds.width/10),
-            containerView.heightAnchor.constraint(equalToConstant: 250),
+            containerView.heightAnchor.constraint(equalToConstant: 13*view.bounds.height/35),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0)
         ])
     }

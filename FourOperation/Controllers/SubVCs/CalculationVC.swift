@@ -9,6 +9,9 @@ import UIKit
 
 class CalculationVC: UIViewController {
 
+    //MARK: - Properties
+    let numbersFontSize: CGFloat = 60
+    
     //MARK: - View Layers
     let firstRowLabel = FOTitleLabel()
     let secondRowLabel = FOTitleLabel()
@@ -30,16 +33,11 @@ class CalculationVC: UIViewController {
     }
     
     func configureTextField() {
-        
-        //MARK: - First Row Configure
 
-        //MARK: - Second Row Configure
-        
-        
         //MARK: - Second Row Configure
         operatorLabel.textAlignment = .left
         operatorLabel.backgroundColor = .clear
-        
+         
         //MARK: - Line Label Configure
         lineLabel.translatesAutoresizingMaskIntoConstraints = false
         lineLabel.layer.borderColor = FOColors.backgroundColor?.cgColor
@@ -60,8 +58,9 @@ class CalculationVC: UIViewController {
         
         //MARK: - Result Stack View Components
         correctAnswerLabel.textAlignment = .center
-        
+
         wrongAnswerLabel.textAlignment = .center
+        
         resultStackView.alpha = 0.5
         resultStackView.addArrangedSubview(correctAnswerLabel)
         resultStackView.addArrangedSubview(wrongAnswerLabel)
@@ -78,13 +77,13 @@ class CalculationVC: UIViewController {
 
             //MARK: - First Row Label
             firstRowLabel.topAnchor.constraint(equalTo: calculationView.topAnchor, constant: 0),
-            firstRowLabel.heightAnchor.constraint(equalToConstant: 70),
+            firstRowLabel.heightAnchor.constraint(equalToConstant: view.bounds.height/8),
             firstRowLabel.leadingAnchor.constraint(equalTo: calculationView.leadingAnchor, constant: 0),
             firstRowLabel.trailingAnchor.constraint(equalTo: calculationView.trailingAnchor, constant: -20),
             
             //MARK: - Second Row Label
             secondRowLabel.topAnchor.constraint(equalTo: firstRowLabel.bottomAnchor, constant: 0),
-            secondRowLabel.heightAnchor.constraint(equalToConstant: 70),
+            secondRowLabel.heightAnchor.constraint(equalToConstant: view.bounds.height/8),
             secondRowLabel.leadingAnchor.constraint(equalTo: calculationView.leadingAnchor, constant: 0),
             secondRowLabel.trailingAnchor.constraint(equalTo: calculationView.trailingAnchor, constant: -20),
             
@@ -102,10 +101,9 @@ class CalculationVC: UIViewController {
             
             //MARK: - Result Label Row Label
             resultLabel.bottomAnchor.constraint(equalTo: calculationView.bottomAnchor, constant: 0),
-            resultLabel.heightAnchor.constraint(equalToConstant: 70),
+            resultLabel.heightAnchor.constraint(equalToConstant: view.bounds.height/8),
             resultLabel.leadingAnchor.constraint(equalTo: calculationView.leadingAnchor, constant: 0),
             resultLabel.trailingAnchor.constraint(equalTo: calculationView.trailingAnchor, constant: -20),
-
                         
             //MARK: - Result Stack View Constraints
             resultStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
@@ -115,6 +113,4 @@ class CalculationVC: UIViewController {
         ])
     }
     
-    
-
 }

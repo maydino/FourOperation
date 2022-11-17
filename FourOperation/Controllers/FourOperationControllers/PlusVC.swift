@@ -25,15 +25,15 @@ class PlusVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = FOColors.backgroundColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: FOFont.textFontNormal, size: 25)!]
+        
         //MARK: - Additional Methods
         getRandomNumbers()
         
         //MARK: - Add Imported VCs
         add(childViewController: keyboardVC, to: view)
         configureCalculationVC()
-        
-        //MARK: - Configurations
-        view.backgroundColor = FOColors.backgroundColor
         
         //MARK: - Delegate
         keyboardVC.keyboardDelegate = self

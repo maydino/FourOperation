@@ -23,7 +23,7 @@ class FOTitleLabel: UILabel {
     
     func configure() {
         
-        font = UIFont.systemFont(ofSize: 50)
+        font = UIFont(name: FOFont.textFontBold, size: 55)
         textAlignment = .right
         translatesAutoresizingMaskIntoConstraints = false
         

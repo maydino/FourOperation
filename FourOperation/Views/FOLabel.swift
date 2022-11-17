@@ -18,7 +18,7 @@ class FOLabel: UILabel {
         super.init(frame: .zero)
         
         self.textAlignment = textAlignment
-        self.font = UIFont.systemFont(ofSize: fontSize)
+        self.font = UIFont(name: FOFont.textFontLight, size: fontSize)
         configure()
     }
     
@@ -32,6 +32,8 @@ class FOLabel: UILabel {
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
-        translatesAutoresizingMaskIntoConstraints = false    }
+        translatesAutoresizingMaskIntoConstraints = false
+        
+    }
 
 }
