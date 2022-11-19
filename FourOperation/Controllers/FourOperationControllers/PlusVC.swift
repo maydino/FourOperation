@@ -117,7 +117,8 @@ extension PlusVC: keyboardTextDelegate {
                         if (self.correctAnswerCounter + self.wrongAnswerCounter) > 1 {
                             
                             self.dismiss(animated: true, completion: {
-                                self.gameEnded()
+                                self.gameEnded(correct: self.correctAnswerCounter)
+                                self.newGame()
                             })
                         }
                     }
@@ -134,17 +135,11 @@ extension PlusVC: keyboardTextDelegate {
         calculationVC.resultLabel.text = showNumbersAsString
     }
     
-    func gameEnded() {
-        
-        let congratsVC = CongratsVC()
-        congratsVC.correctAnswersCountLabel.text = "\(correctAnswerCounter) / 10"
-        present(congratsVC, animated: true)
+    func newGame() {
         wrongAnswerCounter = 0
         correctAnswerCounter = 0
         calculationVC.correctAnswerLabel.text = "Correct answer: \(correctAnswerCounter)"
         calculationVC.wrongAnswerLabel.text = "Wrong answer: \(correctAnswerCounter)"
-        print("game end")
-        
         
     }
     

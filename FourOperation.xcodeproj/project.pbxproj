@@ -42,7 +42,7 @@
 /* Begin PBXFileReference section */
 		8B1AC0C8F5CDCEA0E32306C0 /* Pods-FourOperation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourOperation.debug.xcconfig"; path = "Target Support Files/Pods-FourOperation/Pods-FourOperation.debug.xcconfig"; sourceTree = "<group>"; };
 		B034E63AD781795ECCCF0E7B /* Pods_FourOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B102ADD5290E1E6A00C6DBA7 /* FourOperations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourOperations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102ADD8290E1E6A00C6DBA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B102ADDA290E1E6A00C6DBA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B102ADDC290E1E6A00C6DBA7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		B102ADD6290E1E6A00C6DBA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B102ADD5290E1E6A00C6DBA7 /* FourOperations.app */,
+				B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -227,9 +227,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B102ADD4290E1E6A00C6DBA7 /* FourOperations */ = {
+		B102ADD4290E1E6A00C6DBA7 /* FourOperation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperations" */;
+			buildConfigurationList = B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperation" */;
 			buildPhases = (
 				EA1750C651233B720D943033 /* [CP] Check Pods Manifest.lock */,
 				B102ADD1290E1E6A00C6DBA7 /* Sources */,
@@ -241,9 +241,9 @@
 			);
 			dependencies = (
 			);
-			name = FourOperations;
+			name = FourOperation;
 			productName = FourOperation;
-			productReference = B102ADD5290E1E6A00C6DBA7 /* FourOperations.app */;
+			productReference = B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperations" */;
+			buildConfigurationList = B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperation" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -274,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B102ADD4290E1E6A00C6DBA7 /* FourOperations */,
+				B102ADD4290E1E6A00C6DBA7 /* FourOperation */,
 			);
 		};
 /* End PBXProject section */
@@ -559,7 +559,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperations" */ = {
+		B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B102ADE7290E1E6B00C6DBA7 /* Debug */,
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperations" */ = {
+		B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B102ADEA290E1E6B00C6DBA7 /* Debug */,

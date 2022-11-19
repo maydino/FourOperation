@@ -51,3 +51,13 @@ extension UIViewController {
         viewController.didMove(toParent: self)
     }
 }
+
+extension UIViewController {
+    
+    func gameEnded(correct: Int) {
+        let congratsVC = CongratsVC()
+        congratsVC.correctAnswersCountLabel.text = "\(correct) / 10"
+        present(congratsVC, animated: true)
+    }
+}
+
