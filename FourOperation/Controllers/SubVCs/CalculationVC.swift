@@ -44,7 +44,7 @@ class CalculationVC: UIViewController {
         lineLabel.layer.borderWidth = 3
         
         //MARK: - Result Row Configure
-        calculationView.backgroundColor = FOColors.labelBackgroundColor
+        calculationView.backgroundColor = FOColors.buttonColor
         calculationView.layer.cornerRadius = 20
         calculationView.layer.masksToBounds = true
         calculationView.alpha = 0.5

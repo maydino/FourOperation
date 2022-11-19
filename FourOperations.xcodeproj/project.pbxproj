@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D1DD0FF28B8C3CB5F40728A /* Pods_FourOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B034E63AD781795ECCCF0E7B /* Pods_FourOperation.framework */; };
 		B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102ADD8290E1E6A00C6DBA7 /* AppDelegate.swift */; };
 		B102ADDB290E1E6A00C6DBA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102ADDA290E1E6A00C6DBA7 /* SceneDelegate.swift */; };
 		B102ADDD290E1E6A00C6DBA7 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102ADDC290E1E6A00C6DBA7 /* HomeVC.swift */; };
@@ -20,7 +21,6 @@
 		B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C64291B70A300DFE170 /* FOStackView.swift */; };
 		B1B50C67291B71D600DFE170 /* FOLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B50C66291B71D600DFE170 /* FOLabel.swift */; };
 		B1C58EF32922DFF200E03B67 /* CalculationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C58EF22922DFF200E03B67 /* CalculationVC.swift */; };
-		B1D5F942291C91690029C9D2 /* WrongAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */; };
 		B1D5F96A291DB71B0029C9D2 /* FOTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */; };
 		B1D5F96E291DB7B70029C9D2 /* FOFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F96D291DB7B70029C9D2 /* FOFont.swift */; };
 		B1D5F970291DB8000029C9D2 /* FOColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F96F291DB8000029C9D2 /* FOColors.swift */; };
@@ -32,6 +32,7 @@
 		B1D5F97E292163940029C9D2 /* DivideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F97D292163940029C9D2 /* DivideVC.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
+		B1EF14412926A5DB0096A891 /* CongratsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF14402926A5DB0096A891 /* CongratsVC.swift */; };
 		B1FE91CC29245418002264A5 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE91CB29245418002264A5 /* NotificationManager.swift */; };
 		B1FE91CE29245541002264A5 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE91CD29245541002264A5 /* UserDefaultsKeys.swift */; };
 		B1FE91D02924570B002264A5 /* FOTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE91CF2924570B002264A5 /* FOTextField.swift */; };
@@ -39,7 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B1AC0C8F5CDCEA0E32306C0 /* Pods-FourOperation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourOperation.debug.xcconfig"; path = "Target Support Files/Pods-FourOperation/Pods-FourOperation.debug.xcconfig"; sourceTree = "<group>"; };
+		B034E63AD781795ECCCF0E7B /* Pods_FourOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B102ADD5290E1E6A00C6DBA7 /* FourOperations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourOperations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B102ADD8290E1E6A00C6DBA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B102ADDA290E1E6A00C6DBA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B102ADDC290E1E6A00C6DBA7 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		B1B50C64291B70A300DFE170 /* FOStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOStackView.swift; sourceTree = "<group>"; };
 		B1B50C66291B71D600DFE170 /* FOLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOLabel.swift; sourceTree = "<group>"; };
 		B1C58EF22922DFF200E03B67 /* CalculationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationVC.swift; sourceTree = "<group>"; };
-		B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrongAnswerVC.swift; sourceTree = "<group>"; };
 		B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOTabBarVC.swift; sourceTree = "<group>"; };
 		B1D5F96D291DB7B70029C9D2 /* FOFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOFont.swift; sourceTree = "<group>"; };
 		B1D5F96F291DB8000029C9D2 /* FOColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOColors.swift; sourceTree = "<group>"; };
@@ -66,10 +68,12 @@
 		B1D5F97D292163940029C9D2 /* DivideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideVC.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
+		B1EF14402926A5DB0096A891 /* CongratsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsVC.swift; sourceTree = "<group>"; };
 		B1FE91CB29245418002264A5 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		B1FE91CD29245541002264A5 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		B1FE91CF2924570B002264A5 /* FOTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOTextField.swift; sourceTree = "<group>"; };
 		B1FE91D129245FB6002264A5 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		C6D4A6253BB7A878C10FA879 /* Pods-FourOperation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourOperation.release.xcconfig"; path = "Target Support Files/Pods-FourOperation/Pods-FourOperation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,24 +81,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D1DD0FF28B8C3CB5F40728A /* Pods_FourOperation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		817A89FF78509756249BEB52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B1AC0C8F5CDCEA0E32306C0 /* Pods-FourOperation.debug.xcconfig */,
+				C6D4A6253BB7A878C10FA879 /* Pods-FourOperation.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B102ADCC290E1E6A00C6DBA7 = {
 			isa = PBXGroup;
 			children = (
 				B102ADD7290E1E6A00C6DBA7 /* FourOperation */,
 				B102ADD6290E1E6A00C6DBA7 /* Products */,
+				817A89FF78509756249BEB52 /* Pods */,
+				FAAD7BE6683E30FF3750ED56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		B102ADD6290E1E6A00C6DBA7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */,
+				B102ADD5290E1E6A00C6DBA7 /* FourOperations.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -132,10 +148,10 @@
 				B1C58EF42922E00500E03B67 /* SubVCs */,
 				B1B115A52914CC8500DB8225 /* FourOperationControllers */,
 				B102ADDC290E1E6A00C6DBA7 /* HomeVC.swift */,
-				B1D5F941291C91690029C9D2 /* WrongAnswerVC.swift */,
-				B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */,
 				B1D5F971291E09760029C9D2 /* SettingVC.swift */,
+				B1D5F969291DB71B0029C9D2 /* FOTabBarVC.swift */,
 				B1D5F973291F004B0029C9D2 /* FOAlertVC.swift */,
+				B1EF14402926A5DB0096A891 /* CongratsVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,24 +216,34 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FAAD7BE6683E30FF3750ED56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B034E63AD781795ECCCF0E7B /* Pods_FourOperation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B102ADD4290E1E6A00C6DBA7 /* FourOperation */ = {
+		B102ADD4290E1E6A00C6DBA7 /* FourOperations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperation" */;
+			buildConfigurationList = B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperations" */;
 			buildPhases = (
+				EA1750C651233B720D943033 /* [CP] Check Pods Manifest.lock */,
 				B102ADD1290E1E6A00C6DBA7 /* Sources */,
 				B102ADD2290E1E6A00C6DBA7 /* Frameworks */,
 				B102ADD3290E1E6A00C6DBA7 /* Resources */,
+				4E8AB362E7772661EEB7F886 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FourOperation;
+			name = FourOperations;
 			productName = FourOperation;
-			productReference = B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */;
+			productReference = B102ADD5290E1E6A00C6DBA7 /* FourOperations.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +261,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperation" */;
+			buildConfigurationList = B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperations" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -248,7 +274,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B102ADD4290E1E6A00C6DBA7 /* FourOperation */,
+				B102ADD4290E1E6A00C6DBA7 /* FourOperations */,
 			);
 		};
 /* End PBXProject section */
@@ -265,6 +291,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4E8AB362E7772661EEB7F886 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourOperation/Pods-FourOperation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FourOperation/Pods-FourOperation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FourOperation/Pods-FourOperation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA1750C651233B720D943033 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FourOperation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B102ADD1290E1E6A00C6DBA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -275,11 +343,11 @@
 				B1D5F970291DB8000029C9D2 /* FOColors.swift in Sources */,
 				B1D5F97A29215AFD0029C9D2 /* MultiplyVC.swift in Sources */,
 				B102ADDD290E1E6A00C6DBA7 /* HomeVC.swift in Sources */,
+				B1EF14412926A5DB0096A891 /* CongratsVC.swift in Sources */,
 				B1B50C63291A1EAC00DFE170 /* FOView.swift in Sources */,
 				B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */,
 				B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */,
 				B1FE91CC29245418002264A5 /* NotificationManager.swift in Sources */,
-				B1D5F942291C91690029C9D2 /* WrongAnswerVC.swift in Sources */,
 				B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */,
 				B1B50C67291B71D600DFE170 /* FOLabel.swift in Sources */,
 				B1D5F96E291DB7B70029C9D2 /* FOFont.swift in Sources */,
@@ -430,6 +498,7 @@
 		};
 		B102ADEA290E1E6B00C6DBA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B1AC0C8F5CDCEA0E32306C0 /* Pods-FourOperation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -459,6 +528,7 @@
 		};
 		B102ADEB290E1E6B00C6DBA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6D4A6253BB7A878C10FA879 /* Pods-FourOperation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -489,7 +559,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperation" */ = {
+		B102ADD0290E1E6A00C6DBA7 /* Build configuration list for PBXProject "FourOperations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B102ADE7290E1E6B00C6DBA7 /* Debug */,
@@ -498,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperation" */ = {
+		B102ADE9290E1E6B00C6DBA7 /* Build configuration list for PBXNativeTarget "FourOperations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B102ADEA290E1E6B00C6DBA7 /* Debug */,

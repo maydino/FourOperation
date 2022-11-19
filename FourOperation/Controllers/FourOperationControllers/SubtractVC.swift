@@ -21,7 +21,6 @@ class SubtractVC: UIViewController {
     
     //MARK: - Sub ViewControllers
     let keyboardVC = KeyboardVC()
-    let wrongAnswerVC = WrongAnswerVC()
     let calculationVC = CalculationVC()
     
     override func viewDidLoad() {
@@ -44,7 +43,8 @@ class SubtractVC: UIViewController {
     func configureCalculationVC() {
         calculationVC.firstRowLabel.text = "\(firstNumber)"
         calculationVC.secondRowLabel.text = "\(secondNumber)"
-        calculationVC.operatorLabel.text = " ➖"
+        calculationVC.operatorLabel.text = " -"
+        calculationVC.operatorLabel.font = .systemFont(ofSize: 100)
         calculationVC.correctAnswerLabel.text = "Correct Answer: \(correctAnswerCounter)"
         calculationVC.wrongAnswerLabel.text = "Wrong answer: \(wrongAnswerCounter)"
         
