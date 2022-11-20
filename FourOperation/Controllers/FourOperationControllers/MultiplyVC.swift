@@ -88,34 +88,53 @@ extension MultiplyVC: keyboardTextDelegate {
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
                     keyboardVC.numPadNumbers = [Int]()
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                        self.newGame()
+                    }
                     self.viewDidLoad()
-                    
-                    continue
-                    
+                                        
                 } else { // Wrong answer
                     showNumbersAsString = ""
                     wrongAnswerCounter += 1
                     
-                    // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber * secondNumber)")
-                    present(alert, animated: true)
-                    
                     keyboardVC.numPadNumbers = [Int]()
+                    
+                    // Reload the page
                     self.viewDidLoad()
                     
-                    continue
+                    // Present the alert
+                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber * secondNumber)")
+                    
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) > NumberOfQuestions.numberOfQuestions {
+                        alert.alertButton.isHidden = true
+                    }
+                    
+                    present(alert, animated: true)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                            
+                            self.dismiss(animated: true, completion: {
+                                self.newGame()
+                            })
+                        }
+                    }
+
                 }
             } else {
                 showNumbersAsString += "\(i)"
             }
         }
-        // End of game
-        if (wrongAnswerCounter + correctAnswerCounter) >= 5 {
-            wrongAnswerCounter = 0
-            correctAnswerCounter = 0
-            return
-        }
         calculationVC.resultLabel.text = showNumbersAsString
     }
+    
+    func newGame() {
+        self.gameEnded(correct: self.correctAnswerCounter)
+        wrongAnswerCounter = 0
+        correctAnswerCounter = 0
+        calculationVC.correctAnswerLabel.text = "Correct answer: \(correctAnswerCounter)"
+        calculationVC.wrongAnswerLabel.text = "Wrong answer: \(correctAnswerCounter)"
+    }
+    
 }
 
