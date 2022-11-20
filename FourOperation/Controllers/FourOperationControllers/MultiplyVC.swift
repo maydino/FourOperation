@@ -105,7 +105,7 @@ extension MultiplyVC: keyboardTextDelegate {
                     // Present the alert
                     let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber * secondNumber)")
                     
-                    if (self.correctAnswerCounter + self.wrongAnswerCounter) > NumberOfQuestions.numberOfQuestions {
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
                         alert.alertButton.isHidden = true
                     }
                     

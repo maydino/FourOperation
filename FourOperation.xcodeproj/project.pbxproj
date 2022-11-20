@@ -14,7 +14,7 @@
 		B102ADE2290E1E6B00C6DBA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B102ADE1290E1E6B00C6DBA7 /* Assets.xcassets */; };
 		B102ADE5290E1E6B00C6DBA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B102ADE3290E1E6B00C6DBA7 /* LaunchScreen.storyboard */; };
 		B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102ADF0291221F800C6DBA7 /* FOCollectionViewCell.swift */; };
-		B12498B12929F47B00C53D8B /* NumberOfQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12498B02929F47B00C53D8B /* NumberOfQuestions.swift */; };
+		B12498B12929F47B00C53D8B /* NumberOfQuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12498B02929F47B00C53D8B /* NumberOfQuestionsManager.swift */; };
 		B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B115A62914CCC300DB8225 /* PlusVC.swift */; };
 		B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B115A92915F8A000DB8225 /* VC+Ext.swift */; };
 		B1B2F99029189FE600E0356E /* FOTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */; };
@@ -51,7 +51,7 @@
 		B102ADE4290E1E6B00C6DBA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B102ADE6290E1E6B00C6DBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B102ADF0291221F800C6DBA7 /* FOCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCollectionViewCell.swift; sourceTree = "<group>"; };
-		B12498B02929F47B00C53D8B /* NumberOfQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestions.swift; sourceTree = "<group>"; };
+		B12498B02929F47B00C53D8B /* NumberOfQuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestionsManager.swift; sourceTree = "<group>"; };
 		B1B115A62914CCC300DB8225 /* PlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusVC.swift; sourceTree = "<group>"; };
 		B1B115A92915F8A000DB8225 /* VC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Ext.swift"; sourceTree = "<group>"; };
 		B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOTitleLabel.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		B12498AF2929F3DB00C53D8B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B12498B02929F47B00C53D8B /* NumberOfQuestions.swift */,
+				B12498B02929F47B00C53D8B /* NumberOfQuestionsManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -356,7 +356,7 @@
 				B102ADDD290E1E6A00C6DBA7 /* HomeVC.swift in Sources */,
 				B1EF14412926A5DB0096A891 /* CongratsVC.swift in Sources */,
 				B1B50C63291A1EAC00DFE170 /* FOView.swift in Sources */,
-				B12498B12929F47B00C53D8B /* NumberOfQuestions.swift in Sources */,
+				B12498B12929F47B00C53D8B /* NumberOfQuestionsManager.swift in Sources */,
 				B1B50C65291B70A300DFE170 /* FOStackView.swift in Sources */,
 				B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */,
 				B1FE91CC29245418002264A5 /* NotificationManager.swift in Sources */,

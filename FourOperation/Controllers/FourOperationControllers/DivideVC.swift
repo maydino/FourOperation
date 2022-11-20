@@ -64,12 +64,9 @@ class DivideVC: UIViewController {
     
     // Pick a random number
     func getRandomNumbers() {
-        
         resultNumber = allNumbers.randomElement() ?? 0
         secondNumber = allNumbers.randomElement() ?? 0
-        
         firstNumber = resultNumber * secondNumber
-        
     }
 }
 
@@ -93,38 +90,53 @@ extension DivideVC: keyboardTextDelegate {
                 continue
             } else if i == 12 {
                 if resultNumber == Int(showNumbersAsString) {
-                    print("You got it Mutlu!")
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
                     keyboardVC.numPadNumbers = [Int]()
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                        self.newGame()
+                    }
                     self.viewDidLoad()
                     
-                    continue
-                } else {
+                } else {  /// User wrong answer
                     showNumbersAsString = ""
                     wrongAnswerCounter += 1
                     
+                    keyboardVC.numPadNumbers = [Int]()
+
                     // Present the alert
                     let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(resultNumber)")
+                    
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                        alert.alertButton.isHidden = true
+                    }
+                    
                     present(alert, animated: true)
                     
-                    print("Oppss wrong answer, try again...")
-                    keyboardVC.numPadNumbers = [Int]()
-                    self.viewDidLoad()
-                    
-                    continue
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                            
+                            self.dismiss(animated: true, completion: {
+                                self.newGame()
+                            })
+                        }
+                        // Reload the page
+                        self.viewDidLoad()
+                    }
                 }
             } else {
                 showNumbersAsString += "\(i)"
             }
         }
-        if (wrongAnswerCounter + correctAnswerCounter) >= 5 {
-            wrongAnswerCounter = 0
-            correctAnswerCounter = 0
-            print("game end")
-            return
-        }
         calculationVC.resultLabel.text = showNumbersAsString
+    }
+    
+    func newGame() {
+        self.gameEnded(correct: self.correctAnswerCounter)
+        wrongAnswerCounter = 0
+        correctAnswerCounter = 0
+        calculationVC.correctAnswerLabel.text = "Correct answer: \(correctAnswerCounter)"
+        calculationVC.wrongAnswerLabel.text = "Wrong answer: \(correctAnswerCounter)"
     }
     
 }

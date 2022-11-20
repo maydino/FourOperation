@@ -99,19 +99,16 @@ extension PlusVC: keyboardTextDelegate {
                     }
                     self.viewDidLoad()
                     
-                } else {  /// User wromg answer
+                } else {  /// User wrong answer
                     showNumbersAsString = ""
                     wrongAnswerCounter += 1
                     
                     keyboardVC.numPadNumbers = [Int]()
                     
-                    // Reload the page
-                    self.viewDidLoad()
-                    
                     // Present the alert
                     let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber + secondNumber)")
                     
-                    if (self.correctAnswerCounter + self.wrongAnswerCounter) > NumberOfQuestions.numberOfQuestions {
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
                         alert.alertButton.isHidden = true
                     }
                     
@@ -124,8 +121,10 @@ extension PlusVC: keyboardTextDelegate {
                                 self.newGame()
                             })
                         }
+                        // Reload the page
+                        self.viewDidLoad()
                     }
-                                        
+                    
                 }
             } else {
                 showNumbersAsString += "\(i)"
