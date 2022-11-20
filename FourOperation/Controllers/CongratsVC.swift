@@ -77,4 +77,6 @@ class CongratsVC: UIViewController {
         view.addSubview(confettiView)
         confettiView.startConfetti()
     }
+    
+    
 }

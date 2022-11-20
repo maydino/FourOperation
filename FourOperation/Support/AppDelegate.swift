@@ -11,6 +11,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        let navigationBarAppearance = UINavigationBar.appearance()
+        navigationBarAppearance.tintColor = FOColors.textColor
+        navigationBarAppearance.barTintColor = FOColors.textColor
+        
+        let textAttributes = [NSAttributedString.Key.foregroundColor:FOColors.textColor]
+        navigationBarAppearance.titleTextAttributes = textAttributes as [NSAttributedString.Key : Any]
+        
+        
         return true
     }
 

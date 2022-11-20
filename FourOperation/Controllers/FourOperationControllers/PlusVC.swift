@@ -13,7 +13,7 @@ class PlusVC: UIViewController {
     let allNumbers = [1,2,3,4,5,6,7,8,9]
     var firstNumber = 0
     var secondNumber = 0
-    
+
     //MARK: - Answer Counters
     var wrongAnswerCounter = 0
     var correctAnswerCounter = 0
@@ -23,21 +23,22 @@ class PlusVC: UIViewController {
     let calculationVC = CalculationVC()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        view.backgroundColor = FOColors.backgroundColor
+        
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: FOFont.textFontNormal, size: 25)!]
         
         //MARK: - Additional Methods
         getRandomNumbers()
         
-        //MARK: - Add Imported VCs
+        //MARK: - Add Sub VC
         add(childViewController: keyboardVC, to: view)
+
+        //MARK: - Configurations
+        view.backgroundColor = FOColors.backgroundColor
         configureCalculationVC()
         
         //MARK: - Delegate
         keyboardVC.keyboardDelegate = self
-        
     }
     
     func configureCalculationVC() {
@@ -61,7 +62,6 @@ class PlusVC: UIViewController {
         ])
         
         calculationVC.didMove(toParent: self)
-        
     }
     
     func getRandomNumbers() {
@@ -90,57 +90,56 @@ extension PlusVC: keyboardTextDelegate {
                 showNumbersAsString += "0"
                 continue
             } else if i == 12 { // When clicked OK
-                if (firstNumber + secondNumber) == Int(showNumbersAsString) {
+                if (firstNumber + secondNumber) == Int(showNumbersAsString) { /// User correct answer
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
                     keyboardVC.numPadNumbers = [Int]()
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                        self.newGame()
+                    }
                     self.viewDidLoad()
                     
-                } else {
+                } else {  /// User wromg answer
                     showNumbersAsString = ""
                     wrongAnswerCounter += 1
                     
                     keyboardVC.numPadNumbers = [Int]()
                     
+                    // Reload the page
                     self.viewDidLoad()
                     
                     // Present the alert
-                    weak var alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber + secondNumber)")
+                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber + secondNumber)")
                     
-                    if (self.correctAnswerCounter + self.wrongAnswerCounter) > 1 {
-                        alert?.alertButton.isHidden = true
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) > NumberOfQuestions.numberOfQuestions {
+                        alert.alertButton.isHidden = true
                     }
                     
-                    present(alert!, animated: true)
+                    present(alert, animated: true)
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                        if (self.correctAnswerCounter + self.wrongAnswerCounter) > 1 {
+                        if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
                             
                             self.dismiss(animated: true, completion: {
-                                self.gameEnded(correct: self.correctAnswerCounter)
                                 self.newGame()
                             })
                         }
                     }
-                    
-                    print("Opss wrong answer, try again...")
-                    
+                                        
                 }
             } else {
                 showNumbersAsString += "\(i)"
             }
-            
         }
-        
         calculationVC.resultLabel.text = showNumbersAsString
     }
     
     func newGame() {
+        self.gameEnded(correct: self.correctAnswerCounter)
         wrongAnswerCounter = 0
         correctAnswerCounter = 0
         calculationVC.correctAnswerLabel.text = "Correct answer: \(correctAnswerCounter)"
         calculationVC.wrongAnswerLabel.text = "Wrong answer: \(correctAnswerCounter)"
-        
     }
     
 }

@@ -57,7 +57,12 @@ extension UIViewController {
     func gameEnded(correct: Int) {
         let congratsVC = CongratsVC()
         congratsVC.correctAnswersCountLabel.text = "\(correct) / 10"
-        present(congratsVC, animated: true)
+        congratsVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .done, target: self, action: #selector(dismissSelf))
+        show(congratsVC, sender: self)
+    }
+    
+    @objc func dismissSelf() {
+        self.dismiss(animated: true)
     }
 }
 

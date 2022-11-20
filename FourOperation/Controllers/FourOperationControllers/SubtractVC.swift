@@ -25,11 +25,13 @@ class SubtractVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: FOFont.textFontNormal, size: 25)!]
+        
         //MARK: - Additional Methods
         getRandomNumbers()
         
-        //MARK: - Add Imported VCs
+        //MARK: - Add Sub VC
         add(childViewController: keyboardVC, to: view)
         
         //MARK: - Configurations
@@ -60,18 +62,15 @@ class SubtractVC: UIViewController {
         ])
         
         calculationVC.didMove(toParent: self)
-        
     }
     
     // Pick a random number
     func getRandomNumbers() {
-        
         randomNumberIndex = Int.random(in: 0..<9)
-        print("hellooooo \(randomNumberIndex)")
         secondNumber = allNumbers[randomNumberIndex]
         firstNumber = Int.random(in: (randomNumberIndex+1)..<10)
-        
     }
+    
 }
 
 // For keyboard
@@ -94,40 +93,56 @@ extension SubtractVC: keyboardTextDelegate {
                 continue
             } else if i == 12 {
                 if (firstNumber - secondNumber) == Int(showNumbersAsString) {
-                    print("You got it Mutlu!")
                     correctAnswerCounter += 1
                     showNumbersAsString = ""
                     keyboardVC.numPadNumbers = [Int]()
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                        self.newGame()
+                    }
                     self.viewDidLoad()
                     
-                    continue
                 } else {
                     showNumbersAsString = ""
                     wrongAnswerCounter += 1
                     
-                    // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber - secondNumber)")
-                    present(alert, animated: true)
-                    
-                    print("Oppss wrong asnwer, try again...")
                     keyboardVC.numPadNumbers = [Int]()
-                    
+
                     // Reload the page
                     self.viewDidLoad()
                     
-                    continue
+                    // Present the alert
+                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber - secondNumber)")
+                    
+                    // Hide the alert button
+                    if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                        alert.alertButton.isHidden = true
+                    }
+                    
+                    present(alert, animated: true)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
+                            
+                            self.dismiss(animated: true, completion: {
+                                self.newGame()
+                            })
+                        }
+                    }
+                    
                 }
             } else {
                 showNumbersAsString += "\(i)"
             }
         }
-        if (wrongAnswerCounter + correctAnswerCounter) >= 5 {
-            wrongAnswerCounter = 0
-            correctAnswerCounter = 0
-            print("game end")
-            return
-        }
         calculationVC.resultLabel.text = showNumbersAsString
+    }
+    
+    func newGame() {
+        self.gameEnded(correct: self.correctAnswerCounter)
+        wrongAnswerCounter = 0
+        correctAnswerCounter = 0
+        calculationVC.correctAnswerLabel.text = "Correct answer: \(correctAnswerCounter)"
+        calculationVC.wrongAnswerLabel.text = "Wrong answer: \(correctAnswerCounter)"
     }
     
 }

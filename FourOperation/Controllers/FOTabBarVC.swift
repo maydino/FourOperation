@@ -14,14 +14,14 @@ class FOTabBarVC: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        additionalSafeAreaInsets.bottom = 10
 
         UITabBar.appearance().tintColor = FOColors.textColorH
-        UITabBar.appearance().selectedImageTintColor = FOColors.textColor
+        UITabBar.appearance().unselectedItemTintColor = FOColors.textColor
         UITabBar.appearance().backgroundColor =  FOColors.buttonColor
-        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 10)
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
         UITabBarItem.appearance().setTitleTextAttributes(attributes as [NSAttributedString.Key : Any], for: .normal)
-        additionalSafeAreaInsets.bottom = 10
-        
+        UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 8)
         setViewControllers([createHomeNavigationController(),createStatsNavigationController()], animated: true)
     }
     

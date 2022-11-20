@@ -82,11 +82,11 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         print("Selected a section: \(indexPath.section) X \(indexPath.row)")
         let selection = indexPath.item
         print(selection)
-        let pushUpViewController = collectionViewCellPressedAction(item: indexPath.item)
-        pushUpViewController.title = selectedNavigationControllerTitle
-        pushUpViewController.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .done, target: self, action: #selector(dismissSelf))
+        let FOVCs = collectionViewCellPressedAction(item: indexPath.item)
+        FOVCs.title = selectedNavigationControllerTitle
+        FOVCs.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .done, target: self, action: #selector(dismissSelf))
 
-        let navigationController = UINavigationController(rootViewController: pushUpViewController)
+        let navigationController = UINavigationController(rootViewController: FOVCs)
         navigationController.modalPresentationStyle = .overFullScreen
 
         present(navigationController, animated: true)
@@ -114,10 +114,7 @@ final class HomeVC: UIViewController, UICollectionViewDataSource, UICollectionVi
         }
         
     }
-    
-    @objc func dismissSelf() {
-        self.dismiss(animated: true)
-    }
+
 }
 
 
