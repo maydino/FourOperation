@@ -75,7 +75,7 @@ class PlusVC: UIViewController {
 extension PlusVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
-        var showNumbersAsString = ""
+        lazy var showNumbersAsString = ""
         
         print(">>>>>>>>>")
         
@@ -106,7 +106,7 @@ extension PlusVC: keyboardTextDelegate {
                     keyboardVC.numPadNumbers = [Int]()
                     
                     // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber + secondNumber)")
+                    lazy var alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber + secondNumber)")
                     
                     if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
                         alert.alertButton.isHidden = true

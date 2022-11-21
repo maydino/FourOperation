@@ -77,7 +77,7 @@ class SubtractVC: UIViewController {
 extension SubtractVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
-        var showNumbersAsString = ""
+        lazy var showNumbersAsString = ""
         
         print(">>>>>>>>>")
         
@@ -111,7 +111,7 @@ extension SubtractVC: keyboardTextDelegate {
                     self.viewDidLoad()
                     
                     // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber - secondNumber)")
+                    lazy var alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber - secondNumber)")
                     
                     // Hide the alert button
                     if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {

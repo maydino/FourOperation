@@ -74,7 +74,7 @@ class DivideVC: UIViewController {
 extension DivideVC: keyboardTextDelegate {
     
     func keyboardTapped(numbers: [Int]) {
-        var showNumbersAsString = ""
+        lazy var showNumbersAsString = ""
         
         print(">>>>>>>>>")
         
@@ -105,7 +105,7 @@ extension DivideVC: keyboardTextDelegate {
                     keyboardVC.numPadNumbers = [Int]()
 
                     // Present the alert
-                    let alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(resultNumber)")
+                    lazy var alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(resultNumber)")
                     
                     if (self.correctAnswerCounter + self.wrongAnswerCounter) >= NumberOfQuestions.numberOfQuestions {
                         alert.alertButton.isHidden = true

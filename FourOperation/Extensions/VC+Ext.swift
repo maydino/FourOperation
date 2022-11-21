@@ -55,9 +55,22 @@ extension UIViewController {
 extension UIViewController {
     
     func gameEnded(correct: Int) {
+        
         let congratsVC = CongratsVC()
-        congratsVC.correctAnswersCountLabel.text = "\(correct) / 10"
+        congratsVC.correctAnswersCountLabel.text = "\(correct) / 5"
         congratsVC.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "x.circle"), style: .done, target: self, action: #selector(dismissSelf))
+        switch correct {
+        case 1:
+            congratsVC.congratsLabel.text = "Not bad! Try again..."
+        case 2:
+            congratsVC.congratsLabel.text = "Well done! Try again..."
+        case 3:
+            congratsVC.congratsLabel.text = "Getting there! Try again..."
+        case 4:
+            congratsVC.congratsLabel.text = "Wow, so close! Try again..."
+        default:
+            congratsVC.congratsLabel.text = "Wow, that was impressive!"
+        }
         show(congratsVC, sender: self)
     }
     

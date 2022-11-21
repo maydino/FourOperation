@@ -8,5 +8,5 @@
 import Foundation
 
 struct NumberOfQuestions {
-    static let numberOfQuestions = 2
+    static let numberOfQuestions = 5
 }

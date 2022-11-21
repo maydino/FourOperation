@@ -32,7 +32,8 @@ class CongratsVC: UIViewController {
     func configureCongratsLabel() {
         congratsLabel.font = .systemFont(ofSize: 30)
         congratsLabel.textAlignment = .center
-        congratsLabel.text = "Congrats!"
+        congratsLabel.adjustsFontSizeToFitWidth = true
+        congratsLabel.minimumScaleFactor = 0.5
         view.addSubview(congratsLabel)
         
         NSLayoutConstraint.activate([
