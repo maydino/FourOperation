@@ -15,6 +15,7 @@
 		B102ADE5290E1E6B00C6DBA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B102ADE3290E1E6B00C6DBA7 /* LaunchScreen.storyboard */; };
 		B102ADF1291221F800C6DBA7 /* FOCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B102ADF0291221F800C6DBA7 /* FOCollectionViewCell.swift */; };
 		B12498B12929F47B00C53D8B /* NumberOfQuestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12498B02929F47B00C53D8B /* NumberOfQuestionsManager.swift */; };
+		B12498F8292D4C4500C53D8B /* FourOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12498F7292D4C4500C53D8B /* FourOperationTests.swift */; };
 		B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B115A62914CCC300DB8225 /* PlusVC.swift */; };
 		B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B115A92915F8A000DB8225 /* VC+Ext.swift */; };
 		B1B2F99029189FE600E0356E /* FOTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */; };
@@ -40,6 +41,16 @@
 		B1FE91D229245FB6002264A5 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE91D129245FB6002264A5 /* Date+Ext.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B12498F9292D4C4500C53D8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B102ADCD290E1E6A00C6DBA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B102ADD4290E1E6A00C6DBA7;
+			remoteInfo = FourOperation;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8B1AC0C8F5CDCEA0E32306C0 /* Pods-FourOperation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FourOperation.debug.xcconfig"; path = "Target Support Files/Pods-FourOperation/Pods-FourOperation.debug.xcconfig"; sourceTree = "<group>"; };
 		B034E63AD781795ECCCF0E7B /* Pods_FourOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FourOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +63,8 @@
 		B102ADE6290E1E6B00C6DBA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B102ADF0291221F800C6DBA7 /* FOCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOCollectionViewCell.swift; sourceTree = "<group>"; };
 		B12498B02929F47B00C53D8B /* NumberOfQuestionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestionsManager.swift; sourceTree = "<group>"; };
+		B12498F5292D4C4500C53D8B /* FourOperationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FourOperationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12498F7292D4C4500C53D8B /* FourOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourOperationTests.swift; sourceTree = "<group>"; };
 		B1B115A62914CCC300DB8225 /* PlusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusVC.swift; sourceTree = "<group>"; };
 		B1B115A92915F8A000DB8225 /* VC+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Ext.swift"; sourceTree = "<group>"; };
 		B1B2F98F29189FE600E0356E /* FOTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOTitleLabel.swift; sourceTree = "<group>"; };
@@ -87,6 +100,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B12498F2292D4C4500C53D8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				B102ADD7290E1E6A00C6DBA7 /* FourOperation */,
+				B12498F6292D4C4500C53D8B /* FourOperationTests */,
 				B102ADD6290E1E6A00C6DBA7 /* Products */,
 				817A89FF78509756249BEB52 /* Pods */,
 				FAAD7BE6683E30FF3750ED56 /* Frameworks */,
@@ -113,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */,
+				B12498F5292D4C4500C53D8B /* FourOperationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +187,14 @@
 				B12498B02929F47B00C53D8B /* NumberOfQuestionsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		B12498F6292D4C4500C53D8B /* FourOperationTests */ = {
+			isa = PBXGroup;
+			children = (
+				B12498F7292D4C4500C53D8B /* FourOperationTests.swift */,
+			);
+			path = FourOperationTests;
 			sourceTree = "<group>";
 		};
 		B1B115A52914CC8500DB8225 /* FourOperationControllers */ = {
@@ -257,6 +287,24 @@
 			productReference = B102ADD5290E1E6A00C6DBA7 /* FourOperation.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B12498F4292D4C4500C53D8B /* FourOperationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B12498FB292D4C4500C53D8B /* Build configuration list for PBXNativeTarget "FourOperationTests" */;
+			buildPhases = (
+				B12498F1292D4C4500C53D8B /* Sources */,
+				B12498F2292D4C4500C53D8B /* Frameworks */,
+				B12498F3292D4C4500C53D8B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B12498FA292D4C4500C53D8B /* PBXTargetDependency */,
+			);
+			name = FourOperationTests;
+			productName = FourOperationTests;
+			productReference = B12498F5292D4C4500C53D8B /* FourOperationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -264,11 +312,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					B102ADD4290E1E6A00C6DBA7 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					B12498F4292D4C4500C53D8B = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B102ADD4290E1E6A00C6DBA7;
 					};
 				};
 			};
@@ -286,6 +338,7 @@
 			projectRoot = "";
 			targets = (
 				B102ADD4290E1E6A00C6DBA7 /* FourOperation */,
+				B12498F4292D4C4500C53D8B /* FourOperationTests */,
 			);
 		};
 /* End PBXProject section */
@@ -297,6 +350,13 @@
 			files = (
 				B102ADE5290E1E6B00C6DBA7 /* LaunchScreen.storyboard in Resources */,
 				B102ADE2290E1E6B00C6DBA7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12498F3292D4C4500C53D8B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +440,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B12498F1292D4C4500C53D8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12498F8292D4C4500C53D8B /* FourOperationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B12498FA292D4C4500C53D8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B102ADD4290E1E6A00C6DBA7 /* FourOperation */;
+			targetProxy = B12498F9292D4C4500C53D8B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B102ADE3290E1E6B00C6DBA7 /* LaunchScreen.storyboard */ = {
@@ -522,6 +598,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Four Operations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -552,6 +629,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Four Operations";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -565,6 +643,46 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B12498FC292D4C4500C53D8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UY9XT6W64;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mutluaydin.FourOperationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FourOperation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FourOperation";
+			};
+			name = Debug;
+		};
+		B12498FD292D4C4500C53D8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6UY9XT6W64;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mutluaydin.FourOperationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FourOperation.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FourOperation";
 			};
 			name = Release;
 		};
@@ -585,6 +703,15 @@
 			buildConfigurations = (
 				B102ADEA290E1E6B00C6DBA7 /* Debug */,
 				B102ADEB290E1E6B00C6DBA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B12498FB292D4C4500C53D8B /* Build configuration list for PBXNativeTarget "FourOperationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B12498FC292D4C4500C53D8B /* Debug */,
+				B12498FD292D4C4500C53D8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
