@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let titleTextAttributes = [ NSAttributedString.Key.foregroundColor: FOColors.textColorH, NSAttributedString.Key.font: UIFont(name: FOFont.textFontNormal, size: 25)!]
     
-        UINavigationBar.appearance().titleTextAttributes = titleTextAttributes
+        UINavigationBar.appearance().titleTextAttributes = titleTextAttributes as [NSAttributedString.Key : Any]
         
         
         return true

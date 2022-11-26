@@ -91,7 +91,7 @@ final class SettingVC: UIViewController {
     @objc func darkModeSwitchValueDidChange(_ sender: UISwitch) {
         
         if #available(iOS 13.0, *) {
-            let appDelegate = UIApplication.shared.windows.first
+            let appDelegate = UIApplication.shared.currentUIWindow()?.rootViewController
             if sender.isOn {
                 UserDefaultKey.defaults.set(true, forKey: UserDefaultKey.changeModeOn)
                 appDelegate?.overrideUserInterfaceStyle = .dark
@@ -193,7 +193,7 @@ final class SettingVC: UIViewController {
             timePickTextLabel.topAnchor.constraint(equalTo: dailyReminderOnOffLabel.bottomAnchor, constant: 10),
             timePickTextLabel.heightAnchor.constraint(equalToConstant: 40),
             timePickTextLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            timePickTextLabel.widthAnchor.constraint(equalToConstant: 240)
+            timePickTextLabel.widthAnchor.constraint(equalToConstant: 2*view.frame.width/5)
         ])
     }
     
@@ -212,7 +212,7 @@ final class SettingVC: UIViewController {
         NSLayoutConstraint.activate([
             timePickTextField.topAnchor.constraint(equalTo: timePickTextLabel.topAnchor, constant: 0),
             timePickTextField.heightAnchor.constraint(equalToConstant: 40),
-            timePickTextField.leadingAnchor.constraint(equalTo: timePickTextLabel.trailingAnchor, constant: 10),
+            timePickTextField.widthAnchor.constraint(equalToConstant: 2*view.frame.width/5),
             timePickTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
         ])
     }
