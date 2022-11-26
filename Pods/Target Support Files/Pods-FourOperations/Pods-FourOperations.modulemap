@@ -1,0 +1,6 @@
+framework module Pods_FourOperations {
+  umbrella header "Pods-FourOperations-umbrella.h"
+
+  export *
+  module * { export * }
+}
