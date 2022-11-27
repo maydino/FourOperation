@@ -52,6 +52,7 @@ extension UIViewController {
     }
 }
 
+//MARK: - CongratsVC and End of the game action
 extension UIViewController {
     
     func gameEnded(correct: Int) {
@@ -69,7 +70,7 @@ extension UIViewController {
         case 4:
             congratsVC.congratsLabel.text = "Wow, so close! Try again..."
         default:
-            congratsVC.congratsLabel.text = "Wow, that was impressive!"
+            congratsVC.congratsLabel.text = "Good try, do more practice!"
         }
         show(congratsVC, sender: self)
     }

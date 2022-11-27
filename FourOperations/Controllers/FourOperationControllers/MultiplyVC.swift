@@ -99,9 +99,6 @@ extension MultiplyVC: keyboardTextDelegate {
                     
                     keyboardVC.numPadNumbers = [Int]()
                     
-                    // Reload the page
-                    self.viewDidLoad()
-                    
                     // Present the alert
                     lazy var alert = FOAlertVC(title: "Wrong Answer...", message: "Correct Answer was:", result: "\(firstNumber * secondNumber)")
                     
@@ -119,7 +116,8 @@ extension MultiplyVC: keyboardTextDelegate {
                             })
                         }
                     }
-
+                    // Reload the page
+                    self.viewDidLoad()
                 }
             } else {
                 showNumbersAsString += "\(i)"

@@ -120,9 +120,9 @@ extension DivideVC: keyboardTextDelegate {
                                 self.newGame()
                             })
                         }
-                        // Reload the page
-                        self.viewDidLoad()
                     }
+                    // Reload the page
+                    self.viewDidLoad()
                 }
             } else {
                 showNumbersAsString += "\(i)"
