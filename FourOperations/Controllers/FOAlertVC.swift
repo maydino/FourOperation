@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FOAlertVC: UIViewController {
+final class FOAlertVC: UIViewController {
 
     let containerView = UIView()
     let titleLabel = FOLabel(textAlignment: .center, fontSize: 30)

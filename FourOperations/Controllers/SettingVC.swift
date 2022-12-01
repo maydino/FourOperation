@@ -91,7 +91,7 @@ final class SettingVC: UIViewController {
     @objc func darkModeSwitchValueDidChange(_ sender: UISwitch) {
         
         if #available(iOS 13.0, *) {
-            let appDelegate = UIApplication.shared.currentUIWindow()?.rootViewController
+            let appDelegate = UIApplication.shared.windows.first
             if sender.isOn {
                 UserDefaultKey.defaults.set(true, forKey: UserDefaultKey.changeModeOn)
                 appDelegate?.overrideUserInterfaceStyle = .dark

@@ -70,7 +70,7 @@ extension UIViewController {
         case 4:
             congratsVC.congratsLabel.text = "Wow, so close! Try again..."
         default:
-            congratsVC.congratsLabel.text = "Good try, do more practice!"
+            congratsVC.congratsLabel.text = "You are the best!!!"
         }
         show(congratsVC, sender: self)
     }

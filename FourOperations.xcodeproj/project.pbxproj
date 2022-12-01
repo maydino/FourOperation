@@ -39,7 +39,6 @@
 		B1D5F97E292163940029C9D2 /* DivideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D5F97D292163940029C9D2 /* DivideVC.swift */; };
 		B1E407CC2913F9D1004A3326 /* KeyboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */; };
 		B1E407D12913FA6B004A3326 /* KeyboardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E407D02913FA6B004A3326 /* KeyboardCell.swift */; };
-		B1E99B2329328680005F59BF /* UIApplication+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E99B2229328680005F59BF /* UIApplication+Ext.swift */; };
 		B1EF14412926A5DB0096A891 /* CongratsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EF14402926A5DB0096A891 /* CongratsVC.swift */; };
 		B1FE91CC29245418002264A5 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE91CB29245418002264A5 /* NotificationManager.swift */; };
 		B1FE91CE29245541002264A5 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FE91CD29245541002264A5 /* UserDefaultsKeys.swift */; };
@@ -94,7 +93,6 @@
 		B1D5F97D292163940029C9D2 /* DivideVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivideVC.swift; sourceTree = "<group>"; };
 		B1E407CB2913F9D1004A3326 /* KeyboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardVC.swift; sourceTree = "<group>"; };
 		B1E407D02913FA6B004A3326 /* KeyboardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCell.swift; sourceTree = "<group>"; };
-		B1E99B2229328680005F59BF /* UIApplication+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Ext.swift"; sourceTree = "<group>"; };
 		B1EF14402926A5DB0096A891 /* CongratsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsVC.swift; sourceTree = "<group>"; };
 		B1FE91CB29245418002264A5 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		B1FE91CD29245541002264A5 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
@@ -240,7 +238,6 @@
 			children = (
 				B1B115A92915F8A000DB8225 /* VC+Ext.swift */,
 				B1FE91D129245FB6002264A5 /* Date+Ext.swift */,
-				B1E99B2229328680005F59BF /* UIApplication+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -459,7 +456,6 @@
 				B1B115A72914CCC300DB8225 /* PlusVC.swift in Sources */,
 				B1FE91CE29245541002264A5 /* UserDefaultsKeys.swift in Sources */,
 				B1D5F97E292163940029C9D2 /* DivideVC.swift in Sources */,
-				B1E99B2329328680005F59BF /* UIApplication+Ext.swift in Sources */,
 				B1D5F972291E09760029C9D2 /* SettingVC.swift in Sources */,
 				B1B115AA2915F8A000DB8225 /* VC+Ext.swift in Sources */,
 				B102ADD9290E1E6A00C6DBA7 /* AppDelegate.swift in Sources */,
@@ -629,7 +625,7 @@
 				DEVELOPMENT_TEAM = 6UY9XT6W64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FourOperations/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Four Operations";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fun 4 Math";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -640,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mutluaydin.FourOperations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -660,7 +656,7 @@
 				DEVELOPMENT_TEAM = 6UY9XT6W64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FourOperations/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Four Operations";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fun 4 Math";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
@@ -671,7 +667,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mutluaydin.FourOperations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

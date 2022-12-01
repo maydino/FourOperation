@@ -8,7 +8,7 @@
 import UIKit
 import SwiftConfettiView
 
-class CongratsVC: UIViewController {
+final class CongratsVC: UIViewController {
     
     //View Layers
     let congratsLabel = FOTitleLabel()

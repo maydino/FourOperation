@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PlusVC: UIViewController {
+final class PlusVC: UIViewController {
     
     //MARK: - Properties
     let allNumbers = [1,2,3,4,5,6,7,8,9]

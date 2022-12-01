@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FOTabBarVC: UITabBarController {
+final class FOTabBarVC: UITabBarController {
     
     private let attributes = [NSAttributedString.Key.font:UIFont(name: FOFont.textFontNormal, size: 20)]
     private let titleAttributes = [NSAttributedString.Key.font:UIFont(name: FOFont.textFontBold, size: 25)]
